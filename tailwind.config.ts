@@ -11,10 +11,15 @@ const config: Config = {
       "primary-01": "#49deff",
       "primary-02": "#4fffdf",
       "primary-03": "#303030",
+      "primary-04": "#4BE3EB",
       "secondry-01": "#4e4e4e",
       "secondry-02": "#dedede",
       "secondry-03": "#f4f4f4",
       "secondry-04": "#f9f9f9",
+      "secondry-05": "#eaeaea",
+      "secondry-06": "#4a4a4a",
+      white: "#ffffff",
+      black: "#000000",
     },
     extend: {
       backgroundImage: {
@@ -33,9 +38,6 @@ const config: Config = {
         head4: "30px",
         head5: "25px",
         head6: "20px",
-      },
-      padding: {
-        "5.5": "1.375rem",
       },
     },
   },

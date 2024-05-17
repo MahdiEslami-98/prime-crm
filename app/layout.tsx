@@ -18,13 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body
-        className={
-          inter.className + " h-full flex flex-col container mx-auto px-4"
-        }
-      >
+      <body className={inter.className + " flex h-full flex-col"}>
         <HeaderComponent />
-        <div className="flex-1">{children}</div>
+        <div className="container mx-auto flex-1 px-4">{children}</div>
         <FooterComponent />
       </body>
     </html>

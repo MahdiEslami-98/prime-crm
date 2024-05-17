@@ -20,6 +20,7 @@ const config: Config = {
       "secondry-06": "#4a4a4a",
       white: "#ffffff",
       black: "#000000",
+      transparent: "transparent",
     },
     extend: {
       backgroundImage: {

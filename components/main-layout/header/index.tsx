@@ -42,7 +42,7 @@ const HeaderComponent = () => {
         <Button
           color="bg-primary-03"
           text="Login"
-          className="text-white ml-[45px] px-[38px] py-3 text-head6 font-semibold"
+          className="ml-[45px] px-[38px] py-3 text-head6 font-semibold text-white"
         />
       </nav>
       {!isOpen && (
@@ -54,15 +54,25 @@ const HeaderComponent = () => {
         </button>
       )}
       {isOpen && (
-        <div className="md:w1/2 animate-fadeIn bg-white absolute right-0 top-full z-10 h-[400px] w-full rounded-[5px] border border-[6c6c6c] p-4 shadow-md md:h-[400px] lg:hidden"></div>
-      )}
-      {isOpen && (
         <button
           className="rounded-[5px] p-4 active:outline-1 active:ring-1 active:ring-primary-01 lg:hidden"
           onClick={() => setIsOpen(false)}
         >
           <FaX className="h-8 w-8" />
         </button>
+      )}
+      {isOpen && (
+        <div className="md:w1/2 absolute left-1/2 right-1/2 top-full z-10 grid h-[300px] w-[90%] -translate-x-1/2 animate-fadeIn grid-cols-1 rounded-[5px] border border-[6c6c6c] bg-white p-4 shadow-md md:h-[200px] md:grid-cols-2 lg:hidden">
+          {navInfo.map((item, index) => (
+            <Link
+              href={item.route}
+              key={index}
+              className="flex items-center rounded-[5px] px-4 hover:bg-primary-04/10"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
       )}
     </div>
   );

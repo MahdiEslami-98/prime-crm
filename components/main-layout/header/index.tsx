@@ -27,7 +27,7 @@ const navInfo = [
 const HeaderComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="container relative mx-auto flex items-center justify-between px-4 py-3">
+    <div className="container relative mx-auto flex items-center justify-between px-4 py-3 font-jost">
       <Logo />
       <nav className="hidden items-center lg:flex">
         <ul className="flex gap-x-[45px]">

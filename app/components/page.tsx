@@ -66,7 +66,7 @@ const ComponentsPage = () => {
           <p className="row-span-1 pl-12 font-jost text-[50px] font-semibold md:col-span-3 md:row-span-1">
             Color
           </p>
-          <div className="col-span-1 row-span-11 flex flex-col gap-y-[56px] md:col-span-9 md:row-span-1">
+          <div className="col-span-1 row-span-11 flex flex-col gap-y-[56px] pl-4 md:col-span-9 md:row-span-1">
             <div className="flex flex-wrap justify-center gap-x-[75px] gap-y-8 md:justify-start">
               {color.map((item) => (
                 <ColorCard
@@ -93,7 +93,7 @@ const ComponentsPage = () => {
           <p className="row-span-1 pl-12 font-jost text-[50px] font-semibold md:col-span-3">
             Text
           </p>
-          <div className="row-span-11 flex flex-col gap-y-[48px] font-jost md:col-span-9">
+          <div className="row-span-11 flex flex-col gap-y-[48px] pl-4 font-jost md:col-span-9">
             <p className="text-[70px] font-bold">Display Text</p>
             <p className="text-head1 font-semibold">Heading 01 Text</p>
             <p className="text-head2 font-semibold">Heading 02 Text</p>
@@ -107,7 +107,7 @@ const ComponentsPage = () => {
           <p className="row-span-1 pl-12 font-jost text-[50px] font-semibold md:col-span-5 lg:col-span-3">
             Paragraph
           </p>
-          <div className="row-span-11 flex flex-col gap-y-[32px] md:col-span-7 md:row-span-2 lg:col-span-9">
+          <div className="row-span-11 flex flex-col gap-y-[32px] pl-4 md:col-span-7 md:row-span-2 lg:col-span-9">
             <p className="font-open-sans text-head6">
               Veniam quae. Nostrum facere repellendus minus quod aut aliquam
               neque reiciendis. Qui beatae vel magnam repudiandae ipsum repellat
@@ -126,7 +126,7 @@ const ComponentsPage = () => {
           <p className="row-span-1 pl-12 font-jost text-[50px] font-semibold md:col-span-3">
             List
           </p>
-          <div className="row-span-2 md:col-span-9 md:row-span-11">
+          <div className="row-span-2 pl-4 md:col-span-9 md:row-span-11">
             {list.map((item, index) => (
               <div className="flex items-center gap-x-[11px] py-3" key={index}>
                 <img src="/icons/Group 2480.png" alt="" />
@@ -139,7 +139,7 @@ const ComponentsPage = () => {
           <p className="row-span-1 pl-12 font-jost text-[50px] font-semibold md:col-span-3">
             Block Quotes
           </p>
-          <div className="relative row-span-2 grid h-[328px] w-full grid-cols-2 overflow-hidden rounded-[30px]  md:col-span-9 lg:w-[872px]">
+          <div className="relative row-span-2 grid h-[328px] w-full grid-cols-2 overflow-hidden rounded-[30px]  pl-4 md:col-span-9 lg:w-[872px]">
             <div className="bg-primary-01/70"></div>
             <div className="bg-primary-02/70"></div>
             <div className="col-span-2 bg-gradient-to-r from-primary-01/70 to-primary-02/70"></div>
@@ -162,7 +162,7 @@ const ComponentsPage = () => {
           <p className="row-span-1 pl-12 font-jost text-[50px] font-semibold md:col-span-3">
             Button
           </p>
-          <div className="row-span-2 flex flex-col flex-wrap gap-y-[50px] md:col-span-9 md:row-span-1">
+          <div className="row-span-2 flex flex-col flex-wrap gap-y-[50px] pl-4 md:col-span-9 md:row-span-1">
             <div className="flex justify-center gap-x-[20px] md:justify-start">
               <Button
                 text="Default"
@@ -193,7 +193,7 @@ const ComponentsPage = () => {
           <p className="row-span-2 pl-12 font-jost text-[50px] font-semibold md:col-span-3">
             Icons
           </p>
-          <div className="row-span-5 flex flex-col gap-y-[30px] md:col-span-9 md:row-span-1">
+          <div className="row-span-5 flex flex-col gap-y-[30px] pl-4 md:col-span-9 md:row-span-1">
             <div className="flex items-center justify-center gap-x-[33px] md:justify-start">
               <img src="/icons/01.png" alt="" />
               <img src="/icons/02.png" alt="" />

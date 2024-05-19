@@ -19,6 +19,10 @@ const navInfo = [
     route: "/components",
   },
   {
+    name: "Licence",
+    route: "/licence",
+  },
+  {
     name: "ChangeLog",
     route: "/changelog",
   },

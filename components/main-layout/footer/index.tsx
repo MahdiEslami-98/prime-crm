@@ -94,7 +94,7 @@ const FooterComponent = () => {
             ))}
           </div>
         </div>
-        <div className="text-white grid grid-cols-2 gap-y-3 pb-[57px] md:grid-cols-3 xl:grid-cols-5 ">
+        <div className="grid grid-cols-2 gap-y-3 pb-[57px] text-white md:grid-cols-3 xl:grid-cols-5 ">
           {links.map((item, index) => (
             <div className="" key={index}>
               <div className="border-y border-[#6c6c6c] py-[17px] text-head5 font-medium">
@@ -114,13 +114,13 @@ const FooterComponent = () => {
               Contact Us
             </div>
             <div className="mr-[41px] pt-[48px]">
-              <div className="from-transparent via-secondry-06 mb-[22px] rounded-[20px] bg-gradient-to-r to-[#6c6c6c] p-px">
-                <div className="bg-secondry-06 rounded-[20px] px-[21px] py-[19px] text-head6">
+              <div className="mb-[22px] rounded-[20px] bg-gradient-to-r from-transparent via-secondry-06 to-[#6c6c6c] p-px">
+                <div className="rounded-[20px] bg-secondry-06 px-[21px] py-[19px] text-head6">
                   {contact.address}
                 </div>
               </div>
-              <div className="from-transparent via-secondry-06 rounded-[20px] bg-gradient-to-r to-[#6c6c6c] p-px">
-                <div className="bg-secondry-06 rounded-[20px] px-[21px] py-[19px] text-head6">
+              <div className="rounded-[20px] bg-gradient-to-r from-transparent via-secondry-06 to-[#6c6c6c] p-px">
+                <div className="rounded-[20px] bg-secondry-06 px-[21px] py-[19px] text-head6">
                   <p>{contact.phone}</p>
                   <p>{contact.email}</p>
                 </div>
@@ -133,13 +133,13 @@ const FooterComponent = () => {
             </div>
             <div className="relative mt-[48px]">
               <img src="/images/Image.png" className="w-full" alt="" />
-              <div className="bg-white/50 text-black absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[5px] px-[44px] py-[14px] text-center text-head6 font-semibold">
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[5px] bg-white/75 px-[44px] py-[14px] text-center text-head6 font-semibold text-black">
                 Read More
               </div>
             </div>
           </div>
         </div>
-        <div className="text-white border-t border-[] py-[27px] text-center text-head6">
+        <div className="border-t border-[#6c6c6c] py-[27px] text-center text-head6 text-white">
           <p>Copyright © Primarly | Designed by VictorFlow Templates </p>
         </div>
       </div>

@@ -10,11 +10,13 @@ const ColorCard = ({
   color: string;
 }) => {
   return (
-    <>
-      <div className={`w-[203px] h-[203px] ${color}`}></div>
-      <p className="pt-5.5">{name}</p>
-      <p className="pt-1">{colorName}</p>
-    </>
+    <div className="flex flex-col gap-y-[22px]">
+      <div className={`h-[203px] w-[203px] rounded-[30px] ${color}`}></div>
+      <div>
+        <p className="font-jost text-head6 font-semibold">{name}</p>
+        <p className="font-open-sans text-head6 font-semibold">{colorName}</p>
+      </div>
+    </div>
   );
 };
 

@@ -31,6 +31,7 @@ const config: Config = {
       fontFamily: {
         jost: ["Jost", "sans-serif"],
         "open-sans": ["Open Sans", "sans-serif"],
+        mulish: ["Mulish", "sans-serif"],
       },
       fontSize: {
         head1: "60px",

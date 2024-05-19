@@ -62,7 +62,7 @@ const HeaderComponent = () => {
         </button>
       )}
       {isOpen && (
-        <div className="md:w1/2 absolute left-1/2 right-1/2 top-full z-10 grid h-[300px] w-[90%] -translate-x-1/2 animate-fadeIn grid-cols-1 rounded-[5px] border border-[6c6c6c] bg-white p-4 shadow-md md:h-[200px] md:grid-cols-2 lg:hidden">
+        <div className="md:w1/2 absolute left-1/2 right-1/2 top-full z-10 grid h-[270px] w-[90%] -translate-x-1/2 animate-fadeIn grid-cols-1 rounded-[5px] border border-[6c6c6c] bg-white p-4 shadow-md md:h-[150px] md:grid-cols-2 lg:hidden">
           {navInfo.map((item, index) => (
             <Link
               href={item.route}

@@ -21,10 +21,13 @@ const LicnsePage = () => {
               Icon & Graphics
             </p>
             <p className="pb-8 font-open-sans text-head6">
-              Icons and Graphics are manually designed by the{" "}
-              <span className="text-[#8A6FFD]">VictorFlow</span> Templates team.
-              You may download these and edit them to fit your website without
-              asking for permission or providing credit.
+              Icons and Graphics are manually designed by the
+              <span className="font-bold text-[#8A6FFD]">
+                {" "}
+                VictorFlow{" "}
+              </span>{" "}
+              Templates team. You may download these and edit them to fit your
+              website without asking for permission or providing credit.
             </p>
             <p className="pb-[38px] font-open-sans text-head6">
               Upon purchasing Software UI Kit Template our team grants you a
@@ -47,9 +50,9 @@ const LicnsePage = () => {
                 <span className="font-bold">Primarily</span> Webflow Template
                 are licensed for free personal and commercial use. If youd like
                 to use any specific image, you can check the licenses and
-                download the images for free on{" "}
-                <span className="font-bold">Unsplash</span>,{" "}
-                <span className="font-bold">Pexels‍</span>..
+                download the images for free on
+                <span className="font-bold"> Unsplash </span> ,
+                <span className="font-bold"> Pexels‍ </span>..
               </p>
             </div>
             <div>
@@ -78,10 +81,10 @@ const LicnsePage = () => {
               Font
             </p>
             <p className="font-open-sans text-head6">
-              <span className="font-bold text-[#8a6ffd]">Primarily</span>
+              <span className="font-bold text-[#8a6ffd]"> Primarily </span>
               template uses free licensed Google Fonts. Please check
-              <span className="font-bold text-[#8a6ffd]">Jost</span> and
-              <span className="font-bold text-[#8a6ffd]">Open Sans</span>.
+              <span className="font-bold text-[#8a6ffd]"> Jost </span> and
+              <span className="font-bold text-[#8a6ffd]"> Open Sans </span>.
             </p>
           </div>
         </div>

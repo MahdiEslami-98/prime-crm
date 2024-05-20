@@ -50,10 +50,26 @@ const config: Config = {
           "0%": { opacity: "1" },
           "100%": { opacity: "0" },
         },
+        spin2: {
+          "0%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(180deg)" },
+          "100%": { transform: "rotate(0deg)" },
+        },
+        spin3: {
+          "0%": { transform: "rotate(90deg)" },
+          "50%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(-90deg)" },
+        },
       },
       animation: {
         fadeIn: "fadeIn 0.5s ease-in-out",
         fadeOut: "fadeOut 0.5s ease-in-out",
+        spin: "spin 30s linear infinite",
+        spin2: "spin2 5s linear infinite",
+        spin3: "spin 5s linear infinite",
+      },
+      gridTemplateColumns: {
+        hero: "0.75fr 1fr",
       },
     },
   },

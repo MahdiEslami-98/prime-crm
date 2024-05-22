@@ -4,7 +4,7 @@ import Button from "../button";
 
 const HeroSection = () => {
   return (
-    <>
+    <div className="container">
       <div className="absolute right-[0%] top-[0%] -z-10">
         <img src="/images/abs-top.png" alt="" />
       </div>
@@ -87,7 +87,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

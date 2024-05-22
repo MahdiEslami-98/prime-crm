@@ -13,4 +13,10 @@
     background-size: cover;
     background-position: center;
   }
+
+  .mobile_app_section {
+    background-image: url("/images/Image (4).png");
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+  }
 }

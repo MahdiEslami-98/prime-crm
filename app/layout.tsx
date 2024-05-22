@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <body className={inter.className + " flex h-full flex-col"}>
         <HeaderComponent />
-        <div className="container mx-auto flex-1 px-4">{children}</div>
+        <div className="flex-1 text-primary-03">{children}</div>
         <FooterComponent />
       </body>
     </html>

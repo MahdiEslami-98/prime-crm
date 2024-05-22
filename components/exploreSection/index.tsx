@@ -7,7 +7,7 @@ const ExploreSection = () => {
       <div className="absolute left-0 top-[190%] -z-20">
         <img src="/images/abs-right.png" alt="" />
       </div>
-      <div className="flex flex-col gap-y-[29px] pt-[167px]">
+      <div className="container flex flex-col gap-y-[29px] pt-[167px]">
         <div className="flex flex-col gap-y-[14px] text-center">
           <h3 className="font-jost text-head2 font-semibold">
             Explore Premium Features
@@ -54,7 +54,7 @@ const ExploreSection = () => {
           </div>
         </div>
       </div>
-      <div className="relative pt-[199.11px]">
+      <div className="container relative pt-[199.11px]">
         <div className="flex gap-x-[78px]">
           <div className="h-full w-full">
             <img src="/images/Image (3).png" alt="" className="h-full w-full" />

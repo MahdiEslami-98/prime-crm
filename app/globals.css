@@ -18,5 +18,16 @@
     background-image: url("/images/Image (4).png");
     background-position: 100% 100%;
     background-repeat: no-repeat;
+    background-size: 234px;
+  }
+
+  .slider_section {
+    background-image: url("/images/Pattern.png");
+    background-repeat: no-repeat;
+    background-position: 50% 11%;
+  }
+
+  .scribe_section {
+    background-image: conic-gradient(from 0deg at 50% 30%, #4fffdf, #49deff);
   }
 }

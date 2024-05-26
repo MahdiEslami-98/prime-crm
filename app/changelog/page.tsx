@@ -2,7 +2,7 @@ import React from "react";
 
 const ChangelogPage = () => {
   return (
-    <div className="flex flex-col gap-y-[94px] pb-[149.76px] pt-[107px] text-center">
+    <div className="container flex flex-col gap-y-[94px] pb-[149.76px] pt-[107px] text-center">
       <div>
         <p className="pb-[14px] font-jost text-head2 font-semibold text-primary-03">
           Changelog

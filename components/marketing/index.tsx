@@ -26,7 +26,7 @@ const thirdLine = [
 const MarketingSection = () => {
   return (
     <>
-      <div className="absolute right-0 top-[290%] -z-10">
+      <div className="absolute right-0 top-[290%]">
         <img src="/images/Background.png" alt="" />
       </div>
       <div className="container flex gap-x-[76px] pt-[267px]">
@@ -65,11 +65,11 @@ const MarketingSection = () => {
             <Button
               color="bg-primary-03"
               text="Get Started"
-              className="px-[39px] py-[14px] font-jost text-head6 font-medium text-white ring-primary-03 transition-colors hover:bg-white hover:text-primary-03 hover:ring-2"
+              className="px-[39px] py-[14px] font-jost text-head6 font-medium text-white ring-primary-03 transition-colors hover:bg-white hover:text-primary-03 hover:ring-2 dark:bg-primary-02 dark:text-primary-03 dark:hover:bg-secondry-04 dark:hover:text-primary-03"
             />
           </div>
         </div>
-        <div className="h-full w-full">
+        <div className="z-10 h-full w-full">
           <div className="h-[702px] w-[699px] ">
             <img src="/images/Image (2).png" alt="" className="h-full w-full" />
           </div>
@@ -90,7 +90,7 @@ const MarketingSection = () => {
             {firstLine.map((item, index, array) => (
               <div
                 key={index}
-                className={`flex min-h-[100px] min-w-[180px] items-center justify-center border-[#c5c5c5] ${index === array.length - 1 ? "" : " border-r "} `}
+                className={`flex min-h-[100px] min-w-[180px] items-center justify-center border-[#c5c5c5] dark:bg-white ${index === array.length - 1 ? "" : " border-r "} `}
               >
                 <img src={item} alt="" />
               </div>
@@ -100,7 +100,7 @@ const MarketingSection = () => {
             {secondLine.map((item, index, array) => (
               <div
                 key={index}
-                className={`flex min-h-[100px] min-w-[180px] items-center justify-center border-b border-t border-[#c5c5c5] ${index === array.length - 1 ? "" : " border-r "} `}
+                className={`flex min-h-[100px] min-w-[180px] items-center justify-center border-b border-t border-[#c5c5c5] dark:bg-white ${index === array.length - 1 ? "" : " border-r "} `}
               >
                 <img src={item} alt="" />
               </div>
@@ -110,7 +110,7 @@ const MarketingSection = () => {
             {thirdLine.map((item, index, array) => (
               <div
                 key={index}
-                className={`flex min-h-[100px] min-w-[180px] items-center justify-center border-[#c5c5c5] ${index === array.length - 1 ? "" : " border-r "} `}
+                className={`flex min-h-[100px] min-w-[180px] items-center justify-center border-[#c5c5c5] dark:bg-white ${index === array.length - 1 ? "" : " border-r "} `}
               >
                 <img src={item} alt="" />
               </div>

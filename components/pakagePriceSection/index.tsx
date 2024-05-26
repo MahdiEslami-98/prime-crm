@@ -152,12 +152,12 @@ const professional = [
 const PakagePriceSection = () => {
   return (
     <div className="container pt-[152px]">
-      <div className="flex flex-col items-center gap-y-[36px] text-primary-03">
+      <div className="flex flex-col items-center gap-y-[36px] text-primary-03 ">
         <div className="max-w-[871px] text-center">
-          <h3 className="font-jost text-head2 font-semibold">
+          <h3 className="font-jost text-head2 font-semibold dark:text-white">
             Deliver End-To-End Retail Billing & Solutions
           </h3>
-          <p className="font-open-sans text-head5 text-[#4e4e4e]">
+          <p className="font-open-sans text-head5 text-[#4e4e4e] dark:text-[#9a9a9a]">
             Unique and powerful suite of software to run your entire business,
             brought to you by a company with the long term vision to transform
             the way you work.

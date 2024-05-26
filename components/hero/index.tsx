@@ -5,7 +5,7 @@ import Button from "../button";
 const HeroSection = () => {
   return (
     <div className="container">
-      <div className="absolute right-[0%] top-[0%] -z-10">
+      <div className="absolute right-[0%] top-[0%] z-10">
         <img src="/images/abs-top.png" alt="" />
       </div>
       <div className="relative border-b border-[#dedede]">
@@ -21,14 +21,14 @@ const HeroSection = () => {
         <div className="absolute left-[40%] top-[40%] animate-spin2">
           <img src="/images/p2.png" alt="" />
         </div>
-        <div className="absolute right-0 top-[15%] animate-pulse">
+        <div className="absolute right-0 top-[15%] z-20 animate-pulse">
           <img src="/images/Ellipse 277.png" alt="" />
         </div>
 
-        <div className="absolute right-[2%] top-[18%] -z-20 hidden animate-spin md:block">
+        <div className="absolute right-[2%] top-[18%]  hidden animate-spin md:block">
           <img src="/images/Group 2485.png" alt="" />
         </div>
-        <div className="absolute -left-[10%] top-[62%] -z-20 hidden animate-pulse md:block">
+        <div className="absolute -left-[10%] top-[62%] z-10 hidden animate-pulse md:block">
           <img src="/images/Ellipse 276.png" alt="" />
         </div>
         <div className="broder-b relative grid grid-cols-hero items-center border-[#dedede] pb-[56.21px] pt-[185px]">
@@ -68,7 +68,7 @@ const HeroSection = () => {
               <img src="/images/star2.png" alt="" />
             </div>
           </div>
-          <div className="relative hidden h-full xl:block">
+          <div className="relative z-20 hidden h-full xl:block">
             <div className="absolute -top-[10%] left-[4%] h-[198.06px] w-[367.09px] rotate-[-21deg] rounded-[35px] shadow-xl">
               <img src="/images/e1.png" alt="" className="h-full w-full" />
             </div>

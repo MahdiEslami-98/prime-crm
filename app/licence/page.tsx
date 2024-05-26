@@ -3,7 +3,7 @@ import React from "react";
 
 const LicnsePage = () => {
   return (
-    <div className="pb-[215.16px] pt-[107px]">
+    <div className="container pb-[215.16px] pt-[107px]">
       <div className="flex flex-col gap-y-[126px]">
         <div className="mx-auto max-w-[793px] text-center">
           <p className="pb-[14px] font-jost text-head2 font-semibold">

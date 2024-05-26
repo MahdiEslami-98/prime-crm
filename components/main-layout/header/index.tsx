@@ -49,7 +49,7 @@ const HeaderComponent = () => {
   }, []);
 
   return (
-    <div className="dark:bg-primary-03 dark:text-white">
+    <div className="text-primary-03 dark:bg-primary-03 dark:text-white">
       <div className="container relative mx-auto flex items-center justify-between px-4 pb-0 pt-[51px] font-jost ">
         <Logo />
         <div className="flex items-center">
@@ -68,7 +68,7 @@ const HeaderComponent = () => {
             </ul>
             <div
               onClick={themeChanger}
-              className="mr-4 cursor-pointer text-primary-03 lg:ml-[45px] lg:mr-0"
+              className="mr-4 cursor-pointer lg:ml-[45px] lg:mr-0"
             >
               {isDark ? (
                 <IoMoon className=" h-6 w-6 " />
@@ -79,7 +79,7 @@ const HeaderComponent = () => {
             <Button
               color="bg-primary-03"
               text="Login"
-              className="ml-[45px] hidden px-[38px] py-3 text-head6 font-semibold text-white lg:block"
+              className="ml-[45px] hidden px-[38px] py-3 text-head6 font-semibold text-white hover:bg-secondry-04 hover:text-primary-03 dark:bg-secondry-04 dark:text-primary-03 dark:hover:bg-primary-01 dark:hover:text-secondry-04 lg:block"
             />
           </nav>
           {!isOpen && (

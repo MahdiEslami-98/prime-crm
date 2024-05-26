@@ -4,7 +4,7 @@ import React from "react";
 
 const NotFound = () => {
   return (
-    <div className="mb-[75px] mt-[60px] rounded-[30px] bg-[#171717] py-[111.54px] text-center font-jost text-white md:mb-[150.48px] md:mt-[118.59px]">
+    <div className="container mb-[75px] mt-[60px] rounded-[30px] bg-[#171717] py-[111.54px] text-center font-jost text-white md:mb-[150.48px] md:mt-[118.59px]">
       <div className="mx-auto flex max-w-[822px] flex-col gap-y-5">
         <p className="text-[150px] font-extrabold leading-[250px] sm:text-[200px] lg:text-[300px]">
           404

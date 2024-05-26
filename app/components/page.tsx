@@ -53,7 +53,7 @@ const list = [
 
 const ComponentsPage = () => {
   return (
-    <div className="container">
+    <div className="container text-primary-03 dark:bg-primary-03 dark:text-white">
       <div className="mx-auto max-w-[735px] py-[149px] text-center">
         <p className="font-jost text-head2 font-semibold">Style Guide</p>
         <p className="font-open-sans text-head6">

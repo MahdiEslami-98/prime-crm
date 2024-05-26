@@ -53,7 +53,7 @@ const list = [
 
 const ComponentsPage = () => {
   return (
-    <>
+    <div className="container">
       <div className="mx-auto max-w-[735px] py-[149px] text-center">
         <p className="font-jost text-head2 font-semibold">Style Guide</p>
         <p className="font-open-sans text-head6">
@@ -218,7 +218,7 @@ const ComponentsPage = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

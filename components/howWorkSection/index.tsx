@@ -37,15 +37,15 @@ const HowItWorkSection = () => {
                   key={index}
                   className="rounded-[30px] bg-gradient-to-r from-[#e0e0e0]/0 to-[#e0e0e0] p-px"
                 >
-                  <div className="flex gap-x-[23px] rounded-[30px] bg-white px-[14px] py-[30px]">
+                  <div className="flex gap-x-[23px] rounded-[30px] bg-white px-[14px] py-[30px] dark:bg-primary-03">
                     <p className="font-jost text-head2 font-semibold text-[#47cfff]">
                       {"0" + (index + 1)}
                     </p>
                     <div>
-                      <p className="pb-[9px] font-jost text-head4 font-medium text-primary-03">
+                      <p className="pb-[9px] font-jost text-head4 font-medium text-primary-03 dark:text-white">
                         {item.title}
                       </p>
-                      <p className="font-open-sans text-head6 text-[#4e4e4e]">
+                      <p className="font-open-sans text-head6 text-[#4e4e4e] dark:text-[#9a9a9a]">
                         {item.desc}
                       </p>
                     </div>
@@ -56,7 +56,7 @@ const HowItWorkSection = () => {
           </div>
           <div className="mobile_app_section flex flex-col justify-center self-center rounded-l-[30px] bg-[#f6f6f6] pb-[85px] pl-[80px] pt-[115px]  ">
             <div className="max-w-[551px]">
-              <h3 className="pb-[21px] font-jost text-head2 font-semibold">
+              <h3 className="pb-[21px] font-jost text-head2 font-semibold text-primary-03">
                 The Perfect CRM Software: Boost Your Field Sales Team’s
                 Efficiency
               </h3>

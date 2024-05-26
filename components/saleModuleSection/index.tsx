@@ -61,12 +61,12 @@ const saleModule = [
 
 const SaleModuleSection = () => {
   return (
-    <div className="container pt-[432px]">
+    <div className="container pt-[432px] dark:text-primary-03">
       <>
-        <h3 className="pb-[10px] text-center font-jost text-head2 font-semibold">
+        <h3 className="pb-[10px] text-center font-jost text-head2 font-semibold dark:text-white">
           Sales Automation Modules
         </h3>
-        <p className="mx-auto max-w-[893px] pb-[41px] text-center font-open-sans text-head6">
+        <p className="mx-auto max-w-[893px] pb-[41px] text-center font-open-sans text-head6 dark:text-white">
           Unique and powerful suite of software to run your entire business,
           brought to you by a company with the long term vision to transform the
           way you work.

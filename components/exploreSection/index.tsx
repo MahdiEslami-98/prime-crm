@@ -4,10 +4,10 @@ import React from "react";
 const ExploreSection = () => {
   return (
     <>
-      <div className="absolute left-0 top-[190%] -z-20">
+      <div className="absolute left-0 top-[190%]">
         <img src="/images/abs-right.png" alt="" />
       </div>
-      <div className="container flex flex-col gap-y-[29px] pt-[167px]">
+      <div className="container z-10 flex flex-col gap-y-[29px] pt-[167px]">
         <div className="flex flex-col gap-y-[14px] text-center">
           <h3 className="font-jost text-head2 font-semibold">
             Explore Premium Features
@@ -18,7 +18,7 @@ const ExploreSection = () => {
             the way you work.
           </p>
         </div>
-        <div className="flex gap-x-[44px]">
+        <div className="flex gap-x-[44px] text-primary-03">
           <div className="flex flex-col items-start justify-center rounded-[10px] bg-secondry-03 px-[44px] py-[47px]">
             <div className="pb-[22px]">
               <img src="/icons/01.png" alt="" />
@@ -70,7 +70,7 @@ const ExploreSection = () => {
             </p>
             <div className="flex flex-col gap-y-[30px] pt-[30px]">
               <div className="rounded-[30px] bg-gradient-to-r from-[#e0e0e0]/0 to-[#e0e0e0] p-px">
-                <div className="flex items-start gap-x-[20px] rounded-[30px] bg-white px-[23px] py-[26px]">
+                <div className="flex items-start gap-x-[20px] rounded-[30px] bg-white px-[23px] py-[26px] dark:bg-primary-03">
                   <div className="mt-[11px] h-[21px] w-[21px] rounded-full border border-[#1eb1e5] bg-[#47cfff]"></div>
                   <div className="flex w-[90%] flex-col gap-y-[6px]">
                     <p className="font-jost text-head4 font-medium">
@@ -84,7 +84,7 @@ const ExploreSection = () => {
                 </div>
               </div>
               <div className="rounded-[30px] bg-gradient-to-r from-[#e0e0e0]/0 to-[#e0e0e0] p-px">
-                <div className="flex gap-x-[20px] rounded-[30px]  bg-white px-[23px] py-[26px]">
+                <div className="flex gap-x-[20px] rounded-[30px]  bg-white px-[23px] py-[26px] dark:bg-primary-03">
                   <div className="mt-[11px] h-[21px] w-[21px] rounded-full border border-[#1eb1e5] bg-[#47cfff]"></div>
                   <div className="flex w-[90%] flex-col gap-y-[6px]">
                     <p className="font-jost text-head4 font-medium">

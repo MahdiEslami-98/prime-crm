@@ -56,7 +56,7 @@ const HeaderComponent = () => {
     <div className="text-primary-03 dark:bg-primary-03 dark:text-white">
       <div className="container relative mx-auto flex items-center justify-between px-4 pb-0 pt-[51px] font-jost ">
         <Logo />
-        <div className="flex items-center">
+        <div className="z-20 flex items-center">
           <nav className=" flex items-center">
             <ul className="hidden gap-x-[45px] lg:flex">
               {navInfo.map((item, index) => (

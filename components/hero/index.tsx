@@ -58,11 +58,11 @@ const HeroSection = () => {
             </div>
             <div className="mb-[76px] flex items-center gap-x-9 font-jost text-head6 font-semibold">
               <Button
-                className="px-[39px] py-[14px] text-white  transition-colors hover:bg-white hover:text-primary-03 hover:ring-2 hover:ring-primary-03"
+                className="px-[39px] py-[14px] text-white  transition-colors hover:bg-white hover:text-primary-03 hover:ring-2 hover:ring-primary-03 dark:bg-primary-02 dark:text-primary-03 dark:hover:bg-secondry-04 dark:hover:text-secondry-06"
                 color="bg-primary-03"
                 text="Get Started"
               />
-              <button className="text-primary-03 transition-colors hover:text-primary-01">
+              <button className="text-primary-03 transition-colors hover:text-primary-01 dark:text-white dark:hover:text-primary-01">
                 How it works
               </button>
             </div>

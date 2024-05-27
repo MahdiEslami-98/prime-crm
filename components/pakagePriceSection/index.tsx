@@ -1,7 +1,9 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Button from "@/components/button";
 import { FaCheck } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const starter = [
   {
@@ -153,7 +155,13 @@ const PakagePriceSection = () => {
   return (
     <div className="container pt-[152px]">
       <div className="flex flex-col items-center gap-y-[36px] text-primary-03 ">
-        <div className="max-w-[871px] text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+          className="max-w-[871px] text-center"
+        >
           <h3 className="font-jost text-head2 font-semibold dark:text-white">
             Deliver End-To-End Retail Billing & Solutions
           </h3>
@@ -162,10 +170,15 @@ const PakagePriceSection = () => {
             brought to you by a company with the long term vision to transform
             the way you work.
           </p>
-        </div>
+        </motion.div>
         <div className="scribe_section mb-[770px] h-[533px] w-full rounded-[30px] px-[95px] pt-[118px]">
           <div className="flex gap-x-[64px]">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+            >
               <div className="flex items-center gap-x-[9px] pb-[8px] pl-[60px]">
                 <img
                   src="/icons/Icon (12).png"
@@ -207,8 +220,13 @@ const PakagePriceSection = () => {
                   className="w-full py-[26px] font-jost font-semibold text-primary-03 hover:bg-primary-03 hover:text-white"
                 />
               </div>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+            >
               <div className="flex items-center gap-x-[9px] pb-[8px] pl-[60px]">
                 <img
                   src="/icons/Icon (11).png"
@@ -250,7 +268,7 @@ const PakagePriceSection = () => {
                   className="w-full py-[26px] font-jost font-semibold text-white hover:bg-secondry-04 hover:text-primary-03"
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

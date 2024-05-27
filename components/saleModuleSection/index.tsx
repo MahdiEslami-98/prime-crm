@@ -1,5 +1,7 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import { motion } from "framer-motion";
 
 const saleModule = [
   {
@@ -62,7 +64,12 @@ const saleModule = [
 const SaleModuleSection = () => {
   return (
     <div className="container pt-[432px] dark:text-primary-03">
-      <>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+      >
         <h3 className="pb-[10px] text-center font-jost text-head2 font-semibold dark:text-white">
           Sales Automation Modules
         </h3>
@@ -71,19 +78,36 @@ const SaleModuleSection = () => {
           brought to you by a company with the long term vision to transform the
           way you work.
         </p>
-      </>
+      </motion.div>
       <div className="rounded-[30px] border-2 border-dashed border-[#dbdbdb] px-[14px] py-[15px]">
         <div className="grid grid-cols-3 justify-items-start gap-x-[42px] rounded-[30px] bg-secondry-04 px-1 py-[57px]">
           {saleModule.map((item, index) => (
             <div className="flex flex-col items-start" key={index}>
-              <div className="mb-[33px] rounded-[5px] bg-primary-03 px-[41px] py-[14px] text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+                className="mb-[33px] rounded-[5px] bg-primary-03 px-[41px] py-[14px] text-center"
+              >
                 <h3 className=" font-jost text-head6 font-semibold text-white">
                   {item.title}
                 </h3>
-              </div>
+              </motion.div>
               <div className="flex flex-col gap-y-[33px]">
                 {item.items.map((item, index, Array) => (
-                  <div key={index} className={`flex items-center gap-x-[20px]`}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.5,
+                      ease: "easeInOut",
+                    }}
+                    key={index}
+                    className={`flex items-center gap-x-[20px]`}
+                  >
                     <div className="flex w-[20%] items-center justify-center rounded-full">
                       <img src={item.icon} alt="" className="h-full w-full" />
                     </div>
@@ -97,7 +121,7 @@ const SaleModuleSection = () => {
                         Unique and powerful suite sale run your entire business
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>

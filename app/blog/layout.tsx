@@ -2,27 +2,16 @@
 
 /* eslint-disable @next/next/no-img-element */
 import { motion } from "framer-motion";
-import { RecordModel } from "pocketbase";
 import React, { useEffect, useState } from "react";
 import CategoryItem from "@/components/categoryItem";
 import RecentPostItem from "@/components/recentPostItem";
-import getPosts from "@/lib/allPosts";
+import getPosts from "@/api/getPosts";
+import { posts } from "@/types/postsResponse";
+import { usePathname } from "next/navigation";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const [posts, setPosts] = useState<RecordModel[]>([]);
-  //   let childElem;
-  //   if (children) {
-  //     childElem = () => {
-  //       return React.Children.map(children, (child: React.ReactNode) => {
-  //         if (React.isValidElement(child)) {
-  //           return React.cloneElement(child, {
-  //             posts,
-  //           }) as React.ReactElement<any, any>;
-
-  //         }
-  //       });
-  //     };
-  //   }
+  const [posts, setPosts] = useState<posts>();
+  const path = usePathname();
 
   const getResult = async () => {
     try {
@@ -42,18 +31,23 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <img src="/images/Background.png" alt="" />
       </div>
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="pb-[161px] pt-[107px] text-center"
-        >
-          <h2 className="font-jost text-head2 font-semibold">Our Journal</h2>
-          <p className="font-open-sans text-head6">
-            Get the latest articles from our journal, writing, discuss and share
-          </p>
-        </motion.div>
+        {path === "/blog" ? (
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="pb-[161px] pt-[107px] text-center"
+          >
+            <h2 className="font-jost text-head2 font-semibold">Our Journal</h2>
+            <p className="font-open-sans text-head6">
+              Get the latest articles from our journal, writing, discuss and
+              share
+            </p>
+          </motion.div>
+        ) : (
+          <div className="pt-[107px]"></div>
+        )}
         <div className="grid grid-cols-3 pb-[38px]">
           <div className="col-span-2 flex flex-col gap-y-[50px] pr-[50px]">
             {children}
@@ -70,9 +64,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <h3 className="font-jost text-head2 font-semibold">
                   Recent Post
                 </h3>
-                {posts.map((post) => (
-                  <RecentPostItem key={post.id} post={post} />
-                ))}
+                {posts?.items &&
+                  posts?.items.map((post) => (
+                    <RecentPostItem key={post.id} post={post} />
+                  ))}
               </div>
             </motion.div>
             <motion.div
@@ -86,9 +81,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <h3 className="font-jost text-head2 font-semibold">
                   Categories
                 </h3>
-                {posts.map((post) => (
-                  <CategoryItem key={post.id} category={post.category} />
-                ))}
+                {posts?.items &&
+                  posts.items.map((post) => (
+                    <CategoryItem key={post.id} category={post.category} />
+                  ))}
               </div>
             </motion.div>
           </div>

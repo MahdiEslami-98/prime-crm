@@ -30,4 +30,16 @@
   .scribe_section {
     background-image: conic-gradient(from 0deg at 50% 30%, #4fffdf, #49deff);
   }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  .post-gradient {
+    @apply mb-[71px] mt-4 rounded-[30px] bg-gradient-to-r from-primary-01 to-primary-02 px-[30px] py-[133px] text-primary-03;
+  }
+
+  .post-inner {
+    @apply flex flex-col items-center justify-center font-open-sans text-head6 font-semibold italic;
+  }
 }

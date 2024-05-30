@@ -2,10 +2,7 @@
 import React from "react";
 import Button from "@/components/button";
 import Link from "next/link";
-import {
-  IoCalendarOutline,
-  IoChatbubbleEllipsesOutline,
-} from "react-icons/io5";
+import { IoCalendarOutline, IoPersonOutline } from "react-icons/io5";
 import { RecordModel } from "pocketbase";
 import dateFormater from "@/util/dateFormat";
 
@@ -22,7 +19,7 @@ const PostCard = ({ post }: { post: RecordModel }) => {
             {dateFormater(post.created)}
           </p>
           <p className="flex items-center gap-x-[10px]">
-            <IoChatbubbleEllipsesOutline />
+            <IoPersonOutline />
             Admin
           </p>
         </div>

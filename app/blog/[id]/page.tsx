@@ -1,48 +1,143 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import onePost from "@/lib/onePost";
-import { RecordModel } from "pocketbase";
-import React, { useEffect, useState } from "react";
+import getPostById from "@/api/getPostById";
+import { responsePostById } from "@/types/responsePostById";
+import dateFormater from "@/util/dateFormat";
+import React, { SetStateAction, useEffect, useState } from "react";
+import { IoCalendarOutline, IoPersonOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa6";
+import PostComment from "@/components/postComment";
+import Comments from "@/components/comments";
+import { commentRes } from "@/types/getCommentsByPostIdRes";
+import getCommentByPostId from "@/api/getCommentsByPostId";
 
-const SingleBlog = ({ params }: { params: { slug: string } }) => {
-  const [post, setPost] = useState<RecordModel>();
+const logos = [
+  {
+    id: 1,
+    icon: <FaFacebook />,
+    href: "#",
+  },
+  {
+    id: 2,
+    icon: <FaLinkedinIn />,
+    href: "#",
+  },
+  {
+    id: 3,
+    icon: <FaTwitter />,
+    href: "#",
+  },
+  {
+    id: 4,
+    icon: <FaInstagram />,
+    href: "#",
+  },
+];
 
-  const getResult = async () => {
+const SingleBlog = ({ params }: { params: { id: string } }) => {
+  const [post, setPost] = useState<responsePostById>();
+  const [comments, setComments] = useState<commentRes>();
+
+  const getPost = async (param: string) => {
     try {
-      const res = await onePost(params.slug);
+      const res = await getPostById(param);
       res && setPost(res);
     } catch (erorr) {
       console.log(erorr);
     }
   };
 
+  const getComment = async (param: string) => {
+    try {
+      const response = await getCommentByPostId(param);
+      console.log(response);
+      response && setComments(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
-    getResult();
-  });
+    getComment(params.id);
+  }, [params.id]);
+
+  useEffect(() => {
+    getPost(params.id);
+  }, [params.id]);
 
   return (
-    <div className="text-primary-03 dark:bg-primary-03 dark:text-white">
-      <div className="container">
-        <div className="grid grid-cols-3 pb-[150px] pt-[104px] ">
-          <div className="col-span-2 flex flex-col gap-y-[27px] pr-[48px]">
-            <div>
-              <div>
-                <img src="" alt="" />
-              </div>
-              <div>
-                <p></p>
-                <p></p>
-              </div>
-            </div>
-            <div></div>
+    <>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+      >
+        <div className="w-full">
+          <img
+            src={post?.image}
+            alt=""
+            className="h-full w-full rounded-[30px]"
+          />
+          <div className="mt-[27px] flex gap-x-[28px] font-open-sans text-head6 text-[#7d7d7d] dark:text-[#aaa]">
+            <p className="flex items-center gap-x-[10px] ">
+              <IoCalendarOutline />
+              {dateFormater(post?.created ?? new Date().toString())}
+            </p>
+            <p className="flex items-center gap-x-[10px]">
+              <IoPersonOutline />
+              Admin
+            </p>
           </div>
-          <div className="flex flex-col gap-y-[50px] pr-[48px]">
-            <div className="rounded-[30px] bg-white drop-shadow-[0_28px_57px_rgba(190,190,190,0.25)] dark:bg-secondry-06 dark:drop-shadow-[0_28px_10px_rgba(70,70,70,0.05)]"></div>
-            <div className="rounded-[30px] bg-white drop-shadow-[0_28px_57px_rgba(190,190,190,0.25)] dark:bg-secondry-06 dark:drop-shadow-[0_28px_10px_rgba(70,70,70,0.05)]"></div>
+        </div>
+        <div className="list-disc ">
+          <div
+            dangerouslySetInnerHTML={{ __html: post?.title! }}
+            className="font-jost text-head2 font-medium hover:text-primary-01"
+          ></div>
+          <div
+            dangerouslySetInnerHTML={{ __html: post?.desc! }}
+            className=" font-open-sans text-head6 text-[#606060] dark:text-white"
+          ></div>
+          <div
+            dangerouslySetInnerHTML={{ __html: post?.content! }}
+            className="list-disc font-open-sans text-head6 text-[#606060] dark:text-white"
+          ></div>
+        </div>
+      </motion.div>
+      <div className="post-gradient hidden">
+        <div className="post-inner pl-[32px]"></div>
+      </div>
+      <div className="border-b border-t border-[#f4f2f0] dark:border-[#777]">
+        <div className="flex justify-between py-[19px]">
+          <p className="font-jost text-head4 font-medium">Share</p>
+          <div className="flex items-center gap-x-[54px]">
+            {logos.map((logo) => (
+              <Link href={logo.href} key={logo.id}>
+                {logo.icon}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
-    </div>
+      <div className="pt-[55px]">
+        <h3 className="font-jost text-head2 font-semibold">Leave A Comments</h3>
+        <div className="pt-[46px]">
+          <PostComment
+            postId={params.id}
+            onsave={setComments as React.Dispatch<SetStateAction<commentRes>>}
+          />
+        </div>
+      </div>
+      {comments && <Comments comments={comments} />}
+    </>
   );
 };
 

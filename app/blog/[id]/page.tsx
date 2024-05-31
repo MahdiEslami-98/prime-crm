@@ -136,7 +136,10 @@ const SingleBlog = ({ params }: { params: { id: string } }) => {
           />
         </div>
       </div>
-      {comments && <Comments comments={comments} />}
+      <div>
+        <h3 className="font-jost text-head2 font-semibold">Comments</h3>
+        {comments && <Comments comments={comments} />}
+      </div>
     </>
   );
 };

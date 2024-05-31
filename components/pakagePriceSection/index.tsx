@@ -243,7 +243,7 @@ const PakagePriceSection = () => {
               </div>
               <div className="rounded-[30px] bg-white px-[62px] py-[63px] drop-shadow-[0_28px_57px_rgba(190,190,190,0.25)] dark:bg-secondry-06 dark:text-white">
                 <div className="text-primary-03 dark:text-white">
-                  <h3 className="pb-[23px] font-jost text-head1  font-bold">
+                  <h3 className="pb-[23px] font-jost text-head2 font-bold  md:text-head1">
                     $60/Mo
                   </h3>
                   <p className="font-open-sans text-base md:text-head6">

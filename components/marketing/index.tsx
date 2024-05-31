@@ -28,10 +28,10 @@ const thirdLine = [
 const MarketingSection = () => {
   return (
     <>
-      <div className="absolute right-0 top-[290%]">
+      <div className="absolute -bottom-[500%] right-0 lg:top-[290%]">
         <img src="/images/Background.png" alt="" />
       </div>
-      <div className="container flex gap-x-[76px] pt-[267px]">
+      <div className="container relative z-30 flex flex-col gap-x-[76px] pt-[267px] xl:flex-row">
         <div className="flex flex-col gap-y-[55px] py-[71px]">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -100,8 +100,12 @@ const MarketingSection = () => {
           transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
           className="z-10 h-full w-full"
         >
-          <div className="z-10 h-[702px] w-[699px]">
-            <img src="/images/Image (2).png" alt="" className="h-full w-full" />
+          <div className="z-10 h-full w-full">
+            <img
+              src="/images/Image (2).png"
+              alt=""
+              className="h-full w-full lg:h-fit lg:w-fit"
+            />
           </div>
         </motion.div>
       </div>
@@ -112,11 +116,11 @@ const MarketingSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
         >
-          <div className="mx-[208.89px] text-center">
+          <div className="text-center lg:mx-auto">
             <h3 className="pb-[9px] font-jost text-head2 font-semibold">
               Trusted by more than 75 million users globally
             </h3>
-            <p className="mx-auto max-w-[679px] font-open-sans text-head6">
+            <p className="mx-auto font-open-sans text-head6 lg:max-w-[679px]">
               Unique and powerful suite of software to run your entire business,
               brought to you transform the way you work.
             </p>
@@ -129,13 +133,13 @@ const MarketingSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
           >
-            <div className="flex justify-center">
+            <div className="grid grid-cols-[200px_200px] justify-center lg:flex">
               {firstLine.map((item, index, array) => (
                 <div
                   key={index}
-                  className={`flex min-h-[100px] min-w-[180px] items-center justify-center border-[#c5c5c5] dark:bg-white ${index === array.length - 1 ? "" : " border-r "} `}
+                  className={`flex min-h-[100px] min-w-[180px] items-center justify-center border-[#c5c5c5] dark:bg-secondry-06 ${index === array.length - 1 ? "" : " lg:border-r "} border-0`}
                 >
-                  <img src={item} alt="" />
+                  <img src={item} alt="" className="" />
                 </div>
               ))}
             </div>
@@ -146,11 +150,11 @@ const MarketingSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
           >
-            <div className="flex justify-center">
+            <div className="grid grid-cols-[200px_200px] justify-center lg:flex">
               {secondLine.map((item, index, array) => (
                 <div
                   key={index}
-                  className={`flex min-h-[100px] min-w-[180px] items-center justify-center border-b border-t border-[#c5c5c5] dark:bg-white ${index === array.length - 1 ? "" : " border-r "} `}
+                  className={`flex min-h-[100px] min-w-[180px] items-center justify-center border-[#c5c5c5] dark:bg-secondry-06 lg:border-b lg:border-t ${index === array.length - 1 ? "" : " lg:border-r "} border-0 `}
                 >
                   <img src={item} alt="" />
                 </div>
@@ -163,11 +167,11 @@ const MarketingSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
           >
-            <div className="flex justify-center">
+            <div className="grid grid-cols-[200px_200px] justify-center lg:flex">
               {thirdLine.map((item, index, array) => (
                 <div
                   key={index}
-                  className={`flex min-h-[100px] min-w-[180px] items-center justify-center border-[#c5c5c5] dark:bg-white ${index === array.length - 1 ? "" : " border-r "} `}
+                  className={`flex min-h-[100px] min-w-[180px] items-center justify-center border-[#c5c5c5] dark:bg-secondry-06 ${index === array.length - 1 ? "" : " lg:border-r "} border-0`}
                 >
                   <img src={item} alt="" />
                 </div>
@@ -176,15 +180,15 @@ const MarketingSection = () => {
           </motion.div>
         </div>
       </div>
-      <div className="container px-[100px] pt-[91px]">
-        <div className="gradient_img h-[800px] rounded-[30px] bg-gradient-conic from-primary-03 to-[#141414] px-[80px] pt-[100px]">
+      <div className="container px-4 pt-[91px] lg:px-[100px]">
+        <div className="gradient_img h-full rounded-[30px] bg-gradient-conic from-primary-03 to-[#141414] px-[20px] pb-12 pt-12 lg:h-[800px] lg:px-[80px] lg:pb-0 lg:pt-[100px]">
           <div className="grid grid-cols-2 gap-x-[100px]">
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
-              className="text-white"
+              className="col-span-2 text-white xl:col-span-1"
             >
               <h3 className="pb-[9px] font-jost text-head2 font-semibold">
                 Sell | Serve | Automate
@@ -198,7 +202,7 @@ const MarketingSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
-              className="pt-[30px]"
+              className="col-span-2 pt-[30px] xl:col-span-1"
             >
               <label
                 htmlFor="Email"
@@ -206,7 +210,7 @@ const MarketingSection = () => {
               >
                 *Your Business Email Address
               </label>
-              <div className="flex pb-[70px]">
+              <div className="flex pb-10 lg:pb-[70px]">
                 <Input
                   id="Email"
                   className="mr-[9px] h-full min-h-[77px] w-full rounded-[5px] px-[31px] py-[23px] font-open-sans outline-0"

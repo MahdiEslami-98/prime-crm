@@ -213,7 +213,7 @@ const PostComment = ({
   return (
     <form className="flex flex-col gap-y-[41px]" onSubmit={(e) => OnSubmit(e)}>
       <div className="flex w-full flex-col gap-y-[29px]">
-        <div className="flex w-full items-center gap-x-[21px]">
+        <div className="flex w-full flex-col items-center gap-x-[21px] lg:flex-row">
           <div className="flex w-full flex-col">
             <label
               htmlFor="name"
@@ -300,7 +300,7 @@ const PostComment = ({
       </div>
       <div className="flex items-center">
         <Input type="checkbox" id="remember" ref={saveInput} />
-        <label htmlFor="remember" className="font-open-sans] pl-1">
+        <label htmlFor="remember" className="font-open-sans] pl-2">
           save my name, email, and website in this browser for the next time I
           comment
         </label>
@@ -310,7 +310,7 @@ const PostComment = ({
           color="bg-primary-03"
           text={loading ? "Please wait ..." : "Post Comment"}
           type="submit"
-          className="bg-primary-03 px-[28px] py-[14px] font-jost text-head6 font-semibold text-white ring-1 ring-primary-03 hover:bg-white hover:text-primary-03 dark:bg-primary-04 dark:text-primary-03 dark:ring-2 dark:ring-primary-04 dark:hover:bg-white dark:hover:text-primary-04"
+          className="w-full bg-primary-03 px-[28px] py-[14px] font-jost text-head6 font-semibold text-white ring-1 ring-primary-03 transition-colors duration-200 hover:bg-white hover:text-primary-03 dark:bg-primary-04 dark:text-primary-03 dark:ring-2 dark:ring-primary-04 dark:hover:bg-white dark:hover:text-primary-04 sm:w-fit"
         />
       </div>
       <Toast

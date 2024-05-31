@@ -6,7 +6,7 @@ const LicnsePage = () => {
     <div className="text-primary-03 dark:bg-primary-03 dark:text-white">
       <div className="container pb-[215.16px] pt-[107px]">
         <div className="z-10 flex flex-col gap-y-[126px]">
-          <div className="mx-auto max-w-[793px] text-center">
+          <div className="relative z-20 mx-auto max-w-[793px] text-center">
             <p className="pb-[14px] font-jost text-head2 font-semibold">
               Licenses
             </p>
@@ -16,12 +16,12 @@ const LicnsePage = () => {
               Check The Licenses Below.
             </p>
           </div>
-          <div className="z-10 rounded-[30px] border-2 border-dashed border-[#dbdbdb] px-[14px] py-[15px]">
-            <div className="rounded-[30px] bg-[#f9f9f9] px-8 py-8 md:px-[86px] md:py-[88px]">
-              <p className="pb-[17px] font-jost text-head2 font-semibold text-[#1b2534]">
+          <div className="z-10 rounded-[30px] border-2 border-dashed border-[#dbdbdb] px-[14px] py-[15px] dark:border-[#999]">
+            <div className="rounded-[30px] bg-[#f9f9f9] px-8 py-8 dark:bg-secondry-06 md:px-[86px] md:py-[88px]">
+              <p className="pb-[17px] font-jost text-head2 font-semibold text-[#1b2534] dark:text-white">
                 Icon & Graphics
               </p>
-              <p className="pb-8 font-open-sans text-head6 text-[#606060]">
+              <p className="pb-8 font-open-sans text-head6 text-[#606060] dark:text-[#aaa]">
                 Icons and Graphics are manually designed by the
                 <span className="font-bold text-[#8A6FFD]">
                   {" "}
@@ -30,7 +30,7 @@ const LicnsePage = () => {
                 Templates team. You may download these and edit them to fit your
                 website without asking for permission or providing credit.
               </p>
-              <p className="pb-[38px] font-open-sans text-head6 text-[#606060]">
+              <p className="pb-[38px] font-open-sans text-head6 text-[#606060] dark:text-[#aaa]">
                 Upon purchasing Software UI Kit Template our team grants you a
                 nonexclusive, worldwide copyright license to download, copy,
                 modify, and use the icons.
@@ -40,13 +40,13 @@ const LicnsePage = () => {
               </p>
             </div>
           </div>
-          <div className="z-10 rounded-[30px] border-2 border-dashed border-[#dbdbdb] px-[14px] py-[15px]">
-            <div className="flex flex-col gap-y-[38px] rounded-[30px] bg-[#f9f9f9] px-8 py-8 md:px-[86px] md:py-[88px]">
+          <div className="z-10 rounded-[30px] border-2 border-dashed border-[#dbdbdb] px-[14px] py-[15px] dark:border-[#999]">
+            <div className="flex flex-col gap-y-[38px] rounded-[30px] bg-[#f9f9f9] px-8 py-8 dark:bg-secondry-06 md:px-[86px] md:py-[88px]">
               <div>
-                <p className="pb-[22px] font-jost text-head2 font-semibold text-[#1b2534]">
+                <p className="pb-[22px] font-jost text-head2 font-semibold text-[#1b2534] dark:text-white">
                   Photography
                 </p>
-                <p className="font-open-sans text-head6 text-[#606060]">
+                <p className="font-open-sans text-head6 text-[#606060] dark:text-[#aaa]">
                   All images used in the
                   <span className="font-bold">Primarily</span> Webflow Template
                   are licensed for free personal and commercial use. If youd
@@ -57,7 +57,7 @@ const LicnsePage = () => {
                 </p>
               </div>
               <div>
-                <p className="pb-[22px] font-jost text-head4 font-semibold text-[#1b2534]">
+                <p className="pb-[22px] font-jost text-head4 font-semibold text-[#1b2534] dark:text-white">
                   Unsplash: License
                 </p>
                 <p className="font-open-sans text-head6 font-bold text-[#8a6ffd]">
@@ -65,7 +65,7 @@ const LicnsePage = () => {
                 </p>
               </div>
               <div>
-                <p className="pb-[22px] font-jost text-head4 font-semibold text-[#1b2534]">
+                <p className="pb-[22px] font-jost text-head4 font-semibold text-[#1b2534] dark:text-white">
                   Pexel: License
                 </p>
                 <p className="font-open-sans text-head6 font-bold text-[#8a6ffd]">
@@ -77,12 +77,12 @@ const LicnsePage = () => {
               </div>
             </div>
           </div>
-          <div className="rounded-[30px] border-2 border-dashed border-[#dbdbdb] px-[14px] py-[15px]">
-            <div className="rounded-[30px] bg-[#f9f9f9] px-8 py-8 md:px-[86px] md:py-[88px]">
-              <p className="pb-[17px] font-jost text-head2 font-semibold text-[#1b2534]">
+          <div className="rounded-[30px] border-2 border-dashed border-[#dbdbdb] px-[14px] py-[15px] dark:border-[#999]">
+            <div className="rounded-[30px] bg-[#f9f9f9] px-8 py-8 dark:bg-secondry-06 md:px-[86px] md:py-[88px]">
+              <p className="pb-[17px] font-jost text-head2 font-semibold text-[#1b2534] dark:text-white">
                 Font
               </p>
-              <p className="font-open-sans text-head6 text-[#606060]">
+              <p className="font-open-sans text-head6 text-[#606060] dark:text-[#aaa]">
                 <span className="font-bold text-[#8a6ffd]"> Primarily </span>
                 template uses free licensed Google Fonts. Please check
                 <span className="font-bold text-[#8a6ffd]"> Jost </span> and
@@ -91,7 +91,7 @@ const LicnsePage = () => {
             </div>
           </div>
         </div>
-        <div className="absolute right-0 top-[339.88px]">
+        <div className="absolute right-0 top-[50%] lg:top-[35%]">
           <img src="/images/Background.png" alt="" />
         </div>
       </div>

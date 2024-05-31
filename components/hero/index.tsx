@@ -7,25 +7,25 @@ import { m, motion } from "framer-motion";
 const HeroSection = () => {
   return (
     <div className="container">
-      <div className="absolute right-[0%] top-[0%] z-10">
+      <div className="absolute right-[0%] top-[0%] z-10 hidden xl:block">
         <img src="/images/abs-top.png" alt="" />
       </div>
       <div className="relative border-b border-[#dedede]">
         <motion.div
           transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
           animate={{ rotate: 360, x: [-60, 60, -60] }}
-          className="absolute left-[32%] top-[65%]"
+          className="absolute left-[32%] top-[68%] xl:top-[65%]"
         >
           <img src="/images/tri1.png" alt="" />
         </motion.div>
         <motion.div
           transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
           animate={{ rotate: [180, -180, 180], x: [-2, 2, -2], y: [-6, 3, -5] }}
-          className="absolute left-[28%] top-[10%]"
+          className="absolute left-[28%] top-[12%] xl:top-[10%]"
         >
           <img src="/images/tri2.png" alt="" />
         </motion.div>
-        <div className="absolute -left-[12%] top-0 animate-spin">
+        <div className="absolute left-0 top-[5%] animate-spin xl:-left-[12%] xl:top-0">
           <img src="/images/p1.png" alt="" />
         </div>
         <div className="absolute left-[40%] top-[40%] animate-spin">
@@ -35,19 +35,20 @@ const HeroSection = () => {
           <img src="/images/Ellipse 277.png" alt="" />
         </div>
 
-        <div className="absolute right-[2%] top-[18%]  hidden animate-spin2 md:block">
+        <div className="absolute right-[2%] top-[18%]  hidden animate-spin2 xl:block">
           <img src="/images/Group 2485.png" alt="" />
         </div>
         <div className="absolute -left-[10%] top-[62%] z-10 hidden animate-pulse md:block">
           <img src="/images/Ellipse 276.png" alt="" />
         </div>
-        <div className="broder-b relative grid grid-cols-hero items-center border-[#dedede] pb-[56.21px] pt-[185px]">
+        <div className="broder-b relative grid grid-cols-1 items-center border-[#dedede] pb-[56.21px] pt-[185px] xl:grid-cols-hero">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
+            viewport={{ once: true }}
           >
-            <div className="mb-[34px]">
+            <div className="relative z-30 mb-[34px]">
               <h1 className="pb-[21px] pr-[49px] font-jost text-head1 font-semibold">
                 The CRM Platform Your Whole Business Will Love
               </h1>

@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 const SliderSection = () => {
   return (
     <div className="pt-[111px]">
-      <div className="slider_section bg-primary-03 px-[232px] py-[144px]">
+      <div className="slider_section bg-primary-03 py-[144px] lg:px-[232px]">
         <div className="container">
           <div className="">
             <CustomSlider />
           </div>
-          <div className="flex justify-center gap-x-[200px] border-t border-[#999999] px-[28.22px] pt-[50px] text-white">
+          <div className="grid grid-cols-2 justify-center justify-items-center gap-x-[100px] border-t border-[#999999] pt-[50px] text-white md:flex lg:gap-x-[200px] lg:px-[28.22px]">
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}

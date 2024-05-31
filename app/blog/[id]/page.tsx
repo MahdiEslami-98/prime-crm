@@ -79,15 +79,16 @@ const SingleBlog = ({ params }: { params: { id: string } }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="rounded-[30px] bg-white pb-12 dark:bg-secondry-06"
       >
         <div className="w-full">
           <img
             src={post?.image}
             alt=""
-            className="h-full w-full rounded-[30px]"
+            className="h-full w-full rounded-t-[30px]"
           />
           <div className="mt-[27px] flex gap-x-[28px] font-open-sans text-head6 text-[#7d7d7d] dark:text-[#aaa]">
-            <p className="flex items-center gap-x-[10px] ">
+            <p className="flex items-center gap-x-[10px] px-8">
               <IoCalendarOutline />
               {dateFormater(post?.created ?? new Date().toString())}
             </p>
@@ -97,7 +98,7 @@ const SingleBlog = ({ params }: { params: { id: string } }) => {
             </p>
           </div>
         </div>
-        <div className="list-disc ">
+        <div className="list-disc px-8">
           <div
             dangerouslySetInnerHTML={{ __html: post?.title! }}
             className="font-jost text-head2 font-medium hover:text-primary-01"
@@ -115,7 +116,7 @@ const SingleBlog = ({ params }: { params: { id: string } }) => {
       <div className="post-gradient hidden">
         <div className="post-inner pl-[32px]"></div>
       </div>
-      <div className="border-b border-t border-[#f4f2f0] dark:border-[#777]">
+      <div className="border-b border-t border-[#f4f2f0] px-8 dark:border-[#777]">
         <div className="flex justify-between py-[19px]">
           <p className="font-jost text-head4 font-medium">Share</p>
           <div className="flex items-center gap-x-[54px]">
@@ -127,7 +128,7 @@ const SingleBlog = ({ params }: { params: { id: string } }) => {
           </div>
         </div>
       </div>
-      <div className="pt-[55px]">
+      <div className="px-8 pt-[55px]">
         <h3 className="font-jost text-head2 font-semibold">Leave A Comments</h3>
         <div className="pt-[46px]">
           <PostComment

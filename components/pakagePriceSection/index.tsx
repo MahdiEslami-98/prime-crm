@@ -153,7 +153,7 @@ const professional = [
 
 const PakagePriceSection = () => {
   return (
-    <div className="container pt-[152px]">
+    <div className="container pt-[70px] lg:pt-[152px]">
       <div className="flex flex-col items-center gap-y-[36px] text-primary-03 ">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
@@ -171,8 +171,12 @@ const PakagePriceSection = () => {
             the way you work.
           </p>
         </motion.div>
-        <div className="scribe_section mb-[770px] h-[533px] w-full rounded-[30px] px-[95px] pt-[118px]">
-          <div className="flex gap-x-[64px]">
+        <div
+          className="scribe_section mb-[70px] h-full w-full rounded-[30px] px-14 py-20 lg:mb-[770px] lg:h-[533px]
+        
+        lg:px-[95px] lg:pb-0 lg:pt-[118px]"
+        >
+          <div className="flex flex-col gap-y-12 lg:flex-row lg:gap-x-[64px] lg:gap-y-0">
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -187,8 +191,8 @@ const PakagePriceSection = () => {
                 />
                 <p className="font-jost text-head3">Starter</p>
               </div>
-              <div className="rounded-[30px] bg-white px-[62px] py-[63px] drop-shadow-[0_28px_57px_rgba(190,190,190,0.25)]">
-                <div className="text-primary-03">
+              <div className="rounded-[30px] bg-white px-[62px] py-[63px] drop-shadow-[0_28px_57px_rgba(190,190,190,0.25)] dark:bg-secondry-06 dark:text-white">
+                <div className="text-primary-03 dark:text-white">
                   <h3 className="pb-[23px] font-jost text-head1  font-bold">
                     $45/Mo
                   </h3>
@@ -235,8 +239,8 @@ const PakagePriceSection = () => {
                 />
                 <p className="font-jost text-head3">Professional</p>
               </div>
-              <div className="rounded-[30px] bg-white px-[62px] py-[63px] drop-shadow-[0_28px_57px_rgba(190,190,190,0.25)]">
-                <div className="text-primary-03">
+              <div className="rounded-[30px] bg-white px-[62px] py-[63px] drop-shadow-[0_28px_57px_rgba(190,190,190,0.25)] dark:bg-secondry-06 dark:text-white">
+                <div className="text-primary-03 dark:text-white">
                   <h3 className="pb-[23px] font-jost text-head1  font-bold">
                     $60/Mo
                   </h3>

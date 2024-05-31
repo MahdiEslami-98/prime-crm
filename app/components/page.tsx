@@ -68,15 +68,17 @@ const ComponentsPage = () => {
               Color
             </p>
             <div className="col-span-1 row-span-11 flex flex-col gap-y-[56px] pl-4 md:col-span-9 md:row-span-1">
-              <div className="flex flex-wrap justify-center gap-x-[75px] gap-y-8 md:justify-start">
-                {color.map((item) => (
-                  <ColorCard
-                    key={item.hex}
-                    name={item.name}
-                    color={item.class}
-                    colorName={item.hex}
-                  />
-                ))}
+              <div className="flex justify-center xl:justify-start">
+                <div className="flex flex-wrap gap-x-[75px] gap-y-8">
+                  {color.map((item) => (
+                    <ColorCard
+                      key={item.hex}
+                      name={item.name}
+                      color={item.class}
+                      colorName={item.hex}
+                    />
+                  ))}
+                </div>
               </div>
               <div className="flex flex-wrap justify-center gap-x-[75px] gap-y-8 md:justify-start">
                 {color2.map((item) => (
@@ -104,11 +106,11 @@ const ComponentsPage = () => {
               <p className="text-head6">Heading 06 Text</p>
             </div>
           </div>
-          <div className="grid grid-rows-3 md:grid-cols-12 md:grid-rows-1">
-            <p className="row-span-1 pl-12 font-jost text-[50px] font-semibold md:col-span-5 lg:col-span-3">
+          <div className="grid grid-rows-3 xl:grid-cols-12 xl:grid-rows-1">
+            <p className="row-span-1 pl-12 font-jost text-[50px] font-semibold xl:col-span-3">
               Paragraph
             </p>
-            <div className="row-span-11 flex flex-col gap-y-[32px] pl-4 md:col-span-7 md:row-span-2 lg:col-span-9">
+            <div className="row-span-11 flex flex-col gap-y-[32px] pl-4 md:row-span-2 xl:col-span-9">
               <p className="font-open-sans text-head6">
                 Veniam quae. Nostrum facere repellendus minus quod aut aliquam
                 neque reiciendis. Qui beatae vel magnam repudiandae ipsum
@@ -139,21 +141,21 @@ const ComponentsPage = () => {
               ))}
             </div>
           </div>
-          <div className="grid grid-rows-3 md:grid-cols-12 md:grid-rows-1">
-            <p className="row-span-1 text-nowrap pl-12 font-jost text-[50px] font-semibold md:col-span-3">
+          <div className="grid grid-rows-3 justify-items-start xl:grid-cols-12 xl:grid-rows-1">
+            <p className="row-span-1 pl-12 font-jost text-[50px] font-semibold xl:col-span-3 xl:text-nowrap">
               Block Quotes
             </p>
-            <div className="relative row-span-2 grid h-[328px] w-full grid-cols-2   rounded-[30px] pl-4 md:col-span-9 lg:w-[872px]">
+            <div className="relative row-span-2 grid h-[328px] w-full grid-cols-2   rounded-[30px] pl-4 xl:col-span-9 xl:w-[872px]">
               <div className="rounded-tl-[30px] bg-primary-01/70"></div>
               <div className="rounded-tr-[30px] bg-primary-02/70"></div>
               <div className="col-span-2 rounded-b-[30px] bg-gradient-to-r from-primary-01/70 to-primary-02/70"></div>
-              <div className="absolute bottom-1/2 left-1/2 top-1/2 h-[70%] w-[70%] -translate-x-1/2 -translate-y-1/2 text-center">
+              <div className="absolute bottom-1/2 right-1/2 top-1/2 h-[70%] w-[70%] -translate-y-1/2 translate-x-1/2 text-center">
                 <img
                   src="/icons/Pattern.png"
                   alt=""
                   className="mx-auto mt-4 inline-block"
                 />
-                <p className="font-open-sans text-head6 font-semibold italic leading-[28px]">
+                <p className="font-open-sans text-head6 font-semibold italic leading-[24px]">
                   <span className="text-[71px]">W</span>hen an unknown
                   printegalley of type and scrambled it to make a type specimen
                   book. It has survived not only five centuries, but also the

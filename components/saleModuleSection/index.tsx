@@ -63,7 +63,7 @@ const saleModule = [
 
 const SaleModuleSection = () => {
   return (
-    <div className="container pt-[432px] dark:text-primary-03">
+    <div className="container pt-[60px] dark:text-primary-03 md:pt-[100px] lg:pt-[200px] xl:pt-[300px] 2xl:pt-[432px]">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ const SaleModuleSection = () => {
         </p>
       </motion.div>
       <div className="rounded-[30px] border-2 border-dashed border-[#dbdbdb] px-[14px] py-[15px]">
-        <div className="grid grid-cols-3 justify-items-start gap-x-[42px] rounded-[30px] bg-secondry-04 px-1 py-[57px]">
+        <div className="grid grid-cols-1 justify-items-start gap-x-[42px] gap-y-16 rounded-[30px] bg-secondry-04 px-4 py-[57px] dark:bg-secondry-06 dark:text-white lg:grid-cols-3 lg:gap-y-0 lg:px-1">
           {saleModule.map((item, index) => (
             <div className="flex flex-col items-start" key={index}>
               <motion.div
@@ -108,7 +108,7 @@ const SaleModuleSection = () => {
                     key={index}
                     className={`flex items-center gap-x-[20px]`}
                   >
-                    <div className="flex w-[20%] items-center justify-center rounded-full">
+                    <div className="flex items-center justify-center rounded-full lg:w-[30%] xl:w-[20%]">
                       <img src={item.icon} alt="" className="h-full w-full" />
                     </div>
                     <div
@@ -117,7 +117,7 @@ const SaleModuleSection = () => {
                       <p className="font-jost text-head5 font-medium">
                         {item.title}
                       </p>
-                      <p className="font-open-sans text-[18px] text-[#4e4e4e]">
+                      <p className="font-open-sans text-[18px] text-[#4e4e4e] dark:text-[#aaa]">
                         Unique and powerful suite sale run your entire business
                       </p>
                     </div>

@@ -20,9 +20,9 @@ const appDesc = [
 
 const HowItWorkSection = () => {
   return (
-    <div className="flex gap-x-[79px] pl-[260px] pt-[136px]">
-      <div className="mx-auto max-w-full">
-        <div className="grid grid-cols-hero gap-x-[76px]">
+    <div className="mx-auto flex gap-x-[79px] pt-[136px] xl:mx-0 xl:pl-[260px]">
+      <div className="mx-auto max-w-full px-4 xl:px-0">
+        <div className="grid grid-cols-1 gap-x-[76px] gap-y-6 xl:grid-cols-hero xl:gap-y-0">
           <div className="flex flex-col gap-y-[37px]">
             <motion.div
               initial={{ opacity: 0, x: -100 }}
@@ -69,7 +69,7 @@ const HowItWorkSection = () => {
               ))}
             </div>
           </div>
-          <div className="mobile_app_section flex flex-col justify-center self-center rounded-l-[30px] bg-[#f6f6f6] pb-[85px] pl-[80px] pt-[115px]  ">
+          <div className="mobile_app_section flex flex-col justify-center self-center rounded-[30px] bg-[#f6f6f6] pb-[85px] pl-[80px] pt-[115px] xl:rounded-l-[30px]  ">
             <div className="max-w-[551px]">
               <motion.h3
                 initial={{ opacity: 0, x: 100 }}

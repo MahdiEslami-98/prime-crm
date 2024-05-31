@@ -25,7 +25,7 @@ const RecentPostItem = ({ post }: { post: RecordModel }) => {
           <h4 className="line-clamp-2 font-jost text-head6 font-medium">
             {post.title}
           </h4>
-          <div className="mt-[10px] flex items-center gap-x-[20px] font-open-sans text-[18px] text-[#666a82] dark:text-[#999]">
+          <div className="mt-[10px] flex flex-wrap items-center gap-x-1 font-open-sans text-[18px] text-[#666a82] dark:text-[#999] sm:gap-x-[20px]">
             <p className="text-nowrap">{dateFormater(post.created)}</p>
             <div className="h-[5px] w-[5px] rounded-full bg-primary-01"></div>
             <p>{post.category}</p>

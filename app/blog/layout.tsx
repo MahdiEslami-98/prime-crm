@@ -27,17 +27,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   }, []);
   return (
     <div className="text-primary-03 dark:bg-primary-03 dark:text-white">
-      <div className="absolute right-0 top-[30%] z-10">
+      <div className="absolute right-0 top-[40%] z-10 xl:top-[30%]">
         <img src="/images/Background.png" alt="" />
       </div>
       <div className="container">
-        {path === "/blog" ? (
+        {path === "/blog" && (
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="pb-[161px] pt-[107px] text-center"
+            className="relative z-20 pt-[107px] text-center"
           >
             <h2 className="font-jost text-head2 font-semibold">Our Journal</h2>
             <p className="font-open-sans text-head6">
@@ -45,11 +45,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               share
             </p>
           </motion.div>
-        ) : (
-          <div className="pt-[107px]"></div>
         )}
-        <div className="grid grid-cols-3 pb-[38px]">
-          <div className="col-span-2 flex flex-col gap-y-[50px] pr-[50px]">
+        <div className="grid grid-cols-1 gap-y-12 pb-[38px] pt-[161px] xl:grid-cols-3 xl:gap-y-0">
+          <div className="relative z-10 col-span-2 flex flex-col gap-y-[50px] xl:pr-[50px]">
             {children}
           </div>
           <div className="flex flex-col gap-y-[50px]">

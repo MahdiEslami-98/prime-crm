@@ -24,10 +24,10 @@ const PostCard = ({ post }: { post: RecordModel }) => {
           </p>
         </div>
         <div>
-          <h3 className="h-32 font-jost text-head2 font-medium hover:text-primary-01">
+          <h3 className="line-clamp-2 h-[115px] font-jost text-head3 font-medium hover:text-primary-01 sm:text-head2">
             {post.title}
           </h3>
-          <p className="line-clamp-2 font-open-sans text-head6 text-[#7d7d7d] dark:text-white">
+          <p className="line-clamp-2 pt-1 font-open-sans text-base text-[#7d7d7d] dark:text-white sm:text-head6">
             {post.desc}
           </p>
         </div>

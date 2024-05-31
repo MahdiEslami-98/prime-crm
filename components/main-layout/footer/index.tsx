@@ -3,6 +3,7 @@ import Logo from "@/components/logo";
 import Link from "next/link";
 import { FaAngleUp } from "react-icons/fa6";
 import React from "react";
+import ScrollToTop from "@/components/scrollToTopBtn";
 
 const icons = [
   {
@@ -130,9 +131,7 @@ const FooterComponent = () => {
           <div className="col-span-2 md:col-span-3 lg:col-span-3 xl:col-span-2">
             <div className=" flex items-center justify-between border-y border-[#6c6c6c] py-[17px] text-head5 font-medium">
               <span>Our Latest News</span>
-              <div className="flex h-[37px] w-[37px] items-center justify-center rounded-full border border-[#6c6c6c] text-[16px]">
-                <FaAngleUp />
-              </div>
+              <ScrollToTop />
             </div>
             <div className="relative mt-[48px]">
               <img src="/images/Image.png" className="w-full" alt="" />

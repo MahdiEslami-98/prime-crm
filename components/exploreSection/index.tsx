@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const ExploreSection = () => {
   return (
     <>
-      <div className="absolute left-0 top-[190%]">
+      <div className="absolute left-0 top-[300%] lg:top-[190%]">
         <img src="/images/abs-right.png" alt="" />
       </div>
       <div className="container z-10 flex flex-col gap-y-[29px] pt-[167px]">
@@ -26,16 +26,16 @@ const ExploreSection = () => {
             the way you work.
           </p>
         </motion.div>
-        <div className="flex gap-x-[44px] text-primary-03">
+        <div className="flex flex-col gap-y-4 text-primary-03 lg:flex-row lg:gap-x-[44px] lg:gap-y-0">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
-            className="flex flex-col items-start justify-center rounded-[10px] bg-secondry-03 px-[44px] py-[47px]"
+            className="relative z-20 flex flex-col items-start justify-center rounded-[10px] bg-secondry-03 px-[44px] py-[47px] dark:bg-secondry-06 dark:text-white"
           >
             <div className="pb-[22px]">
-              <img src="/icons/01.png" alt="" />
+              <img src="/icons/01.png" alt="" className="dark:invert" />
             </div>
             <p className="pb-[5px] font-jost text-head4 font-medium">
               Powerful Settings
@@ -49,10 +49,10 @@ const ExploreSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6, ease: "easeInOut" }}
-            className="flex flex-col items-start justify-center rounded-[10px] bg-white px-[44px] py-[47px] drop-shadow-[0_28px_57px_rgba(190,190,190,0.25)]"
+            className="relative z-20 flex flex-col items-start justify-center rounded-[10px] bg-white px-[44px] py-[47px] drop-shadow-[0_28px_57px_rgba(190,190,190,0.25)] dark:bg-secondry-06 dark:text-white"
           >
             <div className="pb-[22px]">
-              <img src="/icons/02.png" alt="" />
+              <img src="/icons/02.png" alt="" className="dark:invert" />
             </div>
             <p className="pb-[5px] font-jost text-head4 font-medium">
               User Friendly
@@ -66,10 +66,10 @@ const ExploreSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.7, ease: "easeInOut" }}
-            className="flex flex-col items-start justify-center rounded-[10px] bg-secondry-03 px-[44px] py-[47px]"
+            className="relative z-20 flex flex-col items-start justify-center rounded-[10px] bg-secondry-03 px-[44px] py-[47px] dark:bg-secondry-06 dark:text-white"
           >
             <div className="pb-[22px]">
-              <img src="/icons/03.png" alt="" />
+              <img src="/icons/03.png" alt="" className="dark:invert" />
             </div>
             <p className="pb-[5px] font-jost text-head4 font-medium">
               Integrated platform
@@ -81,7 +81,7 @@ const ExploreSection = () => {
         </div>
       </div>
       <div className="container relative pt-[199.11px]">
-        <div className="flex gap-x-[78px]">
+        <div className="flex flex-col gap-x-[78px] xl:flex-row">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -89,11 +89,11 @@ const ExploreSection = () => {
             viewport={{ once: true }}
             className="h-full w-full"
           >
-            <div className="h-full w-full">
+            <div className="relative z-20 h-full w-full">
               <img
                 src="/images/Image (3).png"
                 alt=""
-                className="h-full w-full"
+                className="h-full w-full lg:h-fit lg:w-fit"
               />
             </div>
           </motion.div>
@@ -103,6 +103,7 @@ const ExploreSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5 }}
               viewport={{ once: true }}
+              className="relative z-20"
             >
               <h3 className="font-jost text-head2 font-semibold">
                 Allocate Leads and Simplify Lead Management
@@ -113,7 +114,7 @@ const ExploreSection = () => {
                 to transform the way you work.
               </p>
             </motion.div>
-            <div className="flex flex-col gap-y-[30px] pt-[30px]">
+            <div className="relative z-20 flex flex-col gap-y-[30px] pt-[30px]">
               <motion.div
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}

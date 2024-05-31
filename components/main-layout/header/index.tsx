@@ -58,7 +58,7 @@ const HeaderComponent = () => {
         <Logo />
         <div className="z-20 flex items-center">
           <nav className=" flex items-center">
-            <ul className="hidden gap-x-[45px] lg:flex">
+            <ul className="hidden  gap-x-[45px] xl:flex">
               {navInfo.map((item, index) => (
                 <li key={index}>
                   <Link
@@ -83,27 +83,27 @@ const HeaderComponent = () => {
             <Button
               color="bg-primary-03"
               text="Login"
-              className="ml-[45px] hidden px-[38px] py-3 text-head6 font-semibold text-white hover:bg-secondry-04 hover:text-primary-03 dark:bg-secondry-04 dark:text-primary-03 dark:hover:bg-primary-01 dark:hover:text-secondry-04 lg:block"
+              className="ml-[45px] hidden px-[38px] py-3 text-head6 font-semibold text-white hover:bg-secondry-04 hover:text-primary-03 dark:bg-secondry-04 dark:text-primary-03 dark:hover:bg-primary-01 dark:hover:text-secondry-04 xl:block"
             />
           </nav>
           {!isOpen && (
             <button
               onClick={() => setIsOpen(true)}
-              className="rounded-[5px]  p-4 active:ring-1 active:ring-primary-01 lg:hidden"
+              className="rounded-[5px]  p-4 active:ring-1 active:ring-primary-01 xl:hidden"
             >
               <FaBars className="h-8 w-8" />
             </button>
           )}
           {isOpen && (
             <button
-              className="rounded-[5px] p-4 active:outline-1 active:ring-1 active:ring-primary-01 lg:hidden"
+              className="rounded-[5px] p-4 active:outline-1 active:ring-1 active:ring-primary-01 xl:hidden"
               onClick={() => setIsOpen(false)}
             >
               <FaX className="h-8 w-8" />
             </button>
           )}
           {isOpen && (
-            <div className="md:w1/2 absolute left-1/2 right-1/2 top-full z-10 grid h-[270px] w-[90%] -translate-x-1/2 animate-fadeIn grid-cols-1 rounded-[5px] border border-[6c6c6c] bg-white p-4 shadow-md md:h-[150px] md:grid-cols-2 lg:hidden">
+            <div className="absolute left-1/2 right-1/2 top-[120%] z-50 grid h-[270px] w-[90%] -translate-x-1/2 animate-fadeIn grid-cols-1 gap-y-1 rounded-[5px] border border-[6c6c6c] bg-white p-4 shadow-md dark:bg-secondry-06 md:h-[150px] md:grid-cols-2 xl:hidden">
               {navInfo.map((item, index) => (
                 <Link
                   href={item.route}

@@ -7,7 +7,7 @@ import { m, motion } from "framer-motion";
 const HeroSection = () => {
   return (
     <div className="container">
-      <div className="absolute right-[0%] top-[0%] z-10 hidden xl:block">
+      <div className="xl:10 absolute right-[0%] top-[0%] hidden xl:block">
         <img src="/images/abs-top.png" alt="" />
       </div>
       <div className="relative border-b border-[#dedede]">
@@ -31,14 +31,14 @@ const HeroSection = () => {
         <div className="absolute left-[40%] top-[40%] animate-spin">
           <img src="/images/p2.png" alt="" />
         </div>
-        <div className="absolute right-0 top-[15%] z-20 animate-pulse">
+        <div className="xl:20 absolute right-0 top-[15%] animate-pulse">
           <img src="/images/Ellipse 277.png" alt="" />
         </div>
 
         <div className="absolute right-[2%] top-[18%]  hidden animate-spin2 xl:block">
           <img src="/images/Group 2485.png" alt="" />
         </div>
-        <div className="absolute -left-[10%] top-[62%] z-10 hidden animate-pulse md:block">
+        <div className="xl:10 absolute -left-[10%] top-[62%] hidden animate-pulse md:block">
           <img src="/images/Ellipse 276.png" alt="" />
         </div>
         <div className="broder-b relative grid grid-cols-1 items-center border-[#dedede] pb-[56.21px] pt-[185px] xl:grid-cols-hero">
@@ -48,7 +48,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
             viewport={{ once: true }}
           >
-            <div className="relative z-30 mb-[34px]">
+            <div className="relative mb-[34px] xl:z-20">
               <h1 className="pb-[21px] pr-[49px] font-jost text-head1 font-semibold">
                 The CRM Platform Your Whole Business Will Love
               </h1>
@@ -83,7 +83,7 @@ const HeroSection = () => {
               <img src="/images/star2.png" alt="" />
             </div>
           </motion.div>
-          <div className="relative z-20 hidden h-full xl:block">
+          <div className="xl:20 relative hidden h-full xl:block">
             <motion.div
               initial={{ opacity: 0, x: -100, y: -75 }}
               whileInView={{ opacity: 1, x: 0 }}

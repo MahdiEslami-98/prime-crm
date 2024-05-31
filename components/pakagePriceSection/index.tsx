@@ -172,7 +172,7 @@ const PakagePriceSection = () => {
           </p>
         </motion.div>
         <div
-          className="scribe_section mb-[70px] h-full w-full rounded-[30px] px-14 py-20 lg:mb-[770px] lg:h-[533px]
+          className="scribe_section mb-[70px] h-full w-full rounded-[30px] px-6 py-8 sm:px-14 sm:py-20 lg:mb-[770px] lg:h-[533px]
         
         lg:px-[95px] lg:pb-0 lg:pt-[118px]"
         >
@@ -189,14 +189,14 @@ const PakagePriceSection = () => {
                   alt=""
                   className="h-[57px] w-[57px]"
                 />
-                <p className="font-jost text-head3">Starter</p>
+                <p className="font-jost text-head4 md:text-head3">Starter</p>
               </div>
               <div className="rounded-[30px] bg-white px-[62px] py-[63px] drop-shadow-[0_28px_57px_rgba(190,190,190,0.25)] dark:bg-secondry-06 dark:text-white">
                 <div className="text-primary-03 dark:text-white">
-                  <h3 className="pb-[23px] font-jost text-head1  font-bold">
+                  <h3 className="pb-[23px] font-jost text-head2 font-bold md:text-head1">
                     $45/Mo
                   </h3>
-                  <p className="font-open-sans text-head6">
+                  <p className="font-open-sans text-base md:text-head6">
                     Includes <span className="font-bold">1,000</span> marketing
                     contacts. Additional marketing contacts are sold in
                     increments of <span className="font-bold">1,000</span> from
@@ -206,7 +206,7 @@ const PakagePriceSection = () => {
                   {starter.map((item, index) => (
                     <div key={index} className="flex items-center gap-x-[17px]">
                       <FaCheck className={`${item.iconColor} `} />
-                      <p className="font-open-sans text-head6">
+                      <p className="font-open-sans text-base md:text-head6">
                         {item.before}
                         {item.span && (
                           <span className={`${item.spanColor} font-bold`}>
@@ -237,14 +237,16 @@ const PakagePriceSection = () => {
                   alt=""
                   className="h-[57px] w-[57px]"
                 />
-                <p className="font-jost text-head3">Professional</p>
+                <p className="font-jost text-head4 md:text-head3">
+                  Professional
+                </p>
               </div>
               <div className="rounded-[30px] bg-white px-[62px] py-[63px] drop-shadow-[0_28px_57px_rgba(190,190,190,0.25)] dark:bg-secondry-06 dark:text-white">
                 <div className="text-primary-03 dark:text-white">
                   <h3 className="pb-[23px] font-jost text-head1  font-bold">
                     $60/Mo
                   </h3>
-                  <p className="font-open-sans text-head6">
+                  <p className="font-open-sans text-base md:text-head6">
                     Includes <span className="font-bold">2,000</span> marketing
                     contacts. Additional marketing contacts are sold in
                     increments of <span className="font-bold">5,000</span> from
@@ -254,7 +256,7 @@ const PakagePriceSection = () => {
                   {professional.map((item, index) => (
                     <div key={index} className="flex items-center gap-x-[17px]">
                       <FaCheck className={`${item.iconColor} `} />
-                      <p className="font-open-sans text-head6">
+                      <p className="font-open-sans text-base md:text-head6">
                         {item.before}
                         {item.span && (
                           <span className={`${item.spanColor} font-bold`}>

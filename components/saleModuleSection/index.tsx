@@ -26,7 +26,7 @@ const saleModule = [
     items: [
       {
         title: "Automotive",
-        icon: "/icons/Icon (4).png",
+        icon: "/images/Icon(4).png",
       },
       {
         title: "Real Estate",

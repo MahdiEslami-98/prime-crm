@@ -71,7 +71,7 @@ const HeroSection = () => {
             <div className="flex items-center">
               <img src="/images/star1.png" alt="" className="pr-[23px]" />
               <img src="/images/star3.png" alt="" />
-              <div className="ml-[26.39px] mr-[22.16px] border-l border-[#c1c1c1] pl-[28.86px]">
+              <div className="border-l border-[#c1c1c1] pl-[28.86px] sm:ml-[26.39px] sm:mr-[22.16px]">
                 <p className="font-open-sans text-head3 font-bold">
                   5 Star Awards
                 </p>

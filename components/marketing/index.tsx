@@ -71,7 +71,7 @@ const MarketingSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
             >
-              <img src="/images/icon (4).png" alt="" className="mb-[21px]" />
+              <img src="/images/Icon(4).png" alt="" className="mb-[21px]" />
               <h4 className="pb-[9px] font-jost text-head4 font-medium">
                 Marketing Hub
               </h4>

@@ -80,11 +80,13 @@ const HeaderComponent = () => {
                 <IoSunny className="h-6 w-6" />
               )}
             </div>
-            <Button
-              color="bg-primary-03"
-              text="Login"
-              className="ml-[45px] hidden px-[38px] py-3 text-head6 font-semibold text-white hover:bg-secondry-04 hover:text-primary-03 dark:bg-secondry-04 dark:text-primary-03 dark:hover:bg-primary-01 dark:hover:text-secondry-04 xl:block"
-            />
+            <Link href="/login">
+              <Button
+                color="bg-primary-03"
+                text="Login"
+                className="ml-[45px] hidden px-[38px] py-3 text-head6 font-semibold text-white hover:bg-secondry-04 hover:text-primary-03 dark:bg-secondry-04 dark:text-primary-03 dark:hover:bg-primary-01 dark:hover:text-secondry-04 xl:block"
+              />
+            </Link>
           </nav>
           {!isOpen && (
             <button
@@ -113,11 +115,13 @@ const HeaderComponent = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button
-                color="bg-primary-03"
-                text="Login"
-                className="rounded-[5px] px-4 text-white hover:bg-secondry-04 hover:text-primary-03"
-              />
+              <Link href="/login">
+                <Button
+                  color="bg-primary-03"
+                  text="Login"
+                  className="rounded-[5px] px-4 text-white hover:bg-secondry-04 hover:text-primary-03"
+                />
+              </Link>
             </div>
           )}
         </div>

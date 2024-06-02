@@ -72,8 +72,8 @@ const HowItWorkSection = () => {
           <div className="mobile_app_section flex flex-col justify-center self-center rounded-[30px] bg-[#f6f6f6] pb-[85px] pl-[80px] pt-[115px] xl:rounded-l-[30px]  ">
             <div className="max-w-[551px]">
               <motion.h3
-                initial={{ opacity: 0, x: 100 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
                 className="pb-[21px] font-jost text-head2 font-semibold text-primary-03"
@@ -82,20 +82,20 @@ const HowItWorkSection = () => {
                 Efficiency
               </motion.h3>
               <motion.p
-                initial={{ opacity: 0, x: 100 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+                transition={{ duration: 0.55, delay: 0.5, ease: "easeInOut" }}
                 className="pb-[22px] font-open-sans text-head5 text-[#3ba3cb] "
               >
                 Depending on the Sales Approaches Standardize a Marketing
                 Process
               </motion.p>
               <motion.p
-                initial={{ opacity: 0, x: 100 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+                transition={{ duration: 0.6, delay: 0.5, ease: "easeInOut" }}
                 className="font-open-sans text-head6 text-primary-03"
               >
                 Unique and powerful suite of software to run your entire
@@ -105,7 +105,7 @@ const HowItWorkSection = () => {
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+                transition={{ duration: 0.65, delay: 0.5, ease: "easeInOut" }}
                 className="mt-[20px] flex items-center gap-x-[26px]"
               >
                 <div>

@@ -72,10 +72,10 @@ const HeroSection = () => {
               <img src="/images/star1.png" alt="" className="pr-[23px]" />
               <img src="/images/star3.png" alt="" />
               <div className="border-l border-[#c1c1c1] pl-[28.86px] sm:ml-[26.39px] sm:mr-[22.16px]">
-                <p className="font-open-sans text-head3 font-bold">
+                <p className="font-open-sans text-head5 font-bold sm:text-head3">
                   5 Star Awards
                 </p>
-                <p className="pb-[7px] font-open-sans text-head6">
+                <p className="pb-[7px] font-open-sans text-base sm:text-head6">
                   for customer services
                 </p>
                 <img src="/images/Star.png" alt="" />

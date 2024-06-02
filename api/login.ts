@@ -13,7 +13,6 @@ const loginRequest = async (data: { identity: string; password: string }) => {
     if (response.status === 400) {
       throw new Error("Username or password is incorrect");
     }
-    console.log(response);
     if (!response.ok) {
       throw new Error("Failed to login");
     }

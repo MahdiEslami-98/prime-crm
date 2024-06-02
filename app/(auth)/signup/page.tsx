@@ -1,20 +1,27 @@
 "use client";
-import loginRequest from "@/api/login";
-import Toast from "@/components/Toast";
+import signupRequest from "@/api/signup";
 /* eslint-disable @next/next/no-img-element */
+import Toast from "@/components/Toast";
 import Button from "@/components/button";
 import Input from "@/components/input";
 import clearToast from "@/util/clearToast";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-const LoginPage = () => {
-  const router = useRouter();
+const SignupPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isError, setIsError] = useState({ username: false, password: false });
-  const [valid, setValid] = useState({ username: false, password: false });
+  const [reapeatPassword, setRepeatPassword] = useState("");
+  const [isError, setIsError] = useState({
+    username: false,
+    password: false,
+    repeatPassword: false,
+  });
+  const [valid, setValid] = useState({
+    username: false,
+    password: false,
+    repeatPassword: false,
+  });
   const [loading, setLoading] = useState(false);
   const [showToast, setShowToast] = useState({
     showToast: false,
@@ -67,17 +74,40 @@ const LoginPage = () => {
       }));
     }
   };
+  const repeatPasswordHandler = () => {
+    if (password !== reapeatPassword) {
+      setValid((prev) => ({
+        ...prev,
+        repeatPassword: false,
+      }));
+      setIsError((prev) => ({
+        ...prev,
+        repeatPassword: true,
+      }));
+    } else {
+      setValid((prev) => ({
+        ...prev,
+        repeatPassword: true,
+      }));
+      setIsError((prev) => ({
+        ...prev,
+        repeatPassword: false,
+      }));
+    }
+  };
 
-  const login = async (data: { identity: string; password: string }) => {
+  const signup = async (data: {
+    username: string;
+    password: string;
+    passwordConfirm: string;
+  }) => {
     try {
-      const response = await loginRequest(data);
-      console.log(response);
+      const res = await signupRequest(data);
       setShowToast({
         showToast: true,
-        message: "Login successful",
-        status: "text-[#50C878]",
+        message: `Signup successful`,
+        status: "text-[#4ade80]",
       });
-      clearToast(setShowToast);
     } catch (error) {
       setShowToast({
         showToast: true,
@@ -88,17 +118,20 @@ const LoginPage = () => {
     }
   };
 
-  const submitLoginHandler = (e: React.FormEvent<HTMLFormElement>) => {
+  const submitSignupHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (valid.password && valid.username) {
+    if (valid.username && valid.password && valid.repeatPassword) {
       setLoading(true);
-      login({ identity: username, password: password });
+      signup({
+        username: username,
+        password: password,
+        passwordConfirm: reapeatPassword,
+      });
       e.currentTarget.reset();
       setTimeout(() => {
         setLoading(false);
       }, 500);
-      router.push("/");
-    } else if (!valid.password || !valid.username) {
+    } else if (!valid.username || !valid.password || !valid.repeatPassword) {
       setShowToast({
         showToast: true,
         message: "Please fill all the fields correctly",
@@ -120,16 +153,16 @@ const LoginPage = () => {
         <p className="font-jost text-head2 font-bold">Prime CRM</p>
       </div>
       <div className="flex h-[80%] w-full flex-col justify-center px-8 sm:mx-auto sm:w-[70%] md:w-[60%] lg:w-[80%] xl:w-[70%]">
-        <p className="mb-8 font-jost text-head3 font-semibold">Login</p>
+        <p className="mb-8 font-jost text-head3 font-semibold">Signup</p>
         <form
-          onSubmit={(e) => submitLoginHandler(e)}
           className="flex flex-col gap-y-6"
+          onSubmit={(e) => submitSignupHandler(e)}
         >
-          <div className=" flex w-full flex-col gap-y-2">
+          <div className=" flex w-full flex-col gap-y-1">
             <label htmlFor="username">Username</label>
             <Input
-              onChange={(e) => setUsername(e.target.value.trim())}
               onBlur={usernameHandler}
+              onChange={(e) => setUsername(e.target.value.trim())}
               value={username}
               id="username"
               className="w-full rounded-lg border border-[#ccc] px-4 py-2 font-open-sans outline-none"
@@ -140,12 +173,12 @@ const LoginPage = () => {
               *Username must be at least 3 characters
             </p>
           </div>
-          <div className="flex w-full flex-col gap-y-2">
+          <div className="flex w-full flex-col gap-y-1">
             <label htmlFor="username">Password</label>
             <Input
               type="password"
-              onChange={(e) => setPassword(e.target.value.trim())}
               onBlur={passwordHandler}
+              onChange={(e) => setPassword(e.target.value)}
               value={password}
               id="username"
               className="rounded-lg border border-[#ccc] px-4 py-2 font-open-sans outline-none"
@@ -157,9 +190,25 @@ const LoginPage = () => {
               number and special character
             </p>
           </div>
+          <div className="flex w-full flex-col gap-y-1">
+            <label htmlFor="repeatpass">Repeat Password</label>
+            <Input
+              type="password"
+              onBlur={repeatPasswordHandler}
+              onChange={(e) => setRepeatPassword(e.target.value)}
+              value={reapeatPassword}
+              id="repeatpass"
+              className="rounded-lg border border-[#ccc] px-4 py-2 font-open-sans outline-none"
+            />
+            <p
+              className={`${isError.repeatPassword ? "visible" : "invisible"} text-[12px] text-[#ee6b6e]`}
+            >
+              *Should be same as password
+            </p>
+          </div>
           <div className="flex w-full flex-col text-white">
             <Button
-              text={loading ? "Please wait..." : "Login"}
+              text={loading ? "Please wait..." : "Sign up"}
               color="bg-primary-03"
               type="submit"
               className="py-3"
@@ -168,9 +217,9 @@ const LoginPage = () => {
         </form>
 
         <div className="mt-6 flex items-center font-open-sans text-head6">
-          <p>{"Don't have an account?"}</p>
-          <Link href={"/signup"} className="ml-2 underline">
-            Signup
+          <p>{"Already have an account?"}</p>
+          <Link href={"/login"} className="ml-2 underline">
+            Login
           </Link>
         </div>
       </div>
@@ -178,4 +227,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default SignupPage;

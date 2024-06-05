@@ -6,9 +6,11 @@ import Button from "@/components/button";
 import Input from "@/components/input";
 import clearToast from "@/util/clearToast";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const SignupPage = () => {
+  const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [reapeatPassword, setRepeatPassword] = useState("");
@@ -131,6 +133,7 @@ const SignupPage = () => {
       setTimeout(() => {
         setLoading(false);
       }, 500);
+      router.push("/login");
     } else if (!valid.username || !valid.password || !valid.repeatPassword) {
       setShowToast({
         showToast: true,

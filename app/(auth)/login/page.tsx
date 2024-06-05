@@ -6,9 +6,11 @@ import Button from "@/components/button";
 import Input from "@/components/input";
 import clearToast from "@/util/clearToast";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const LoginPage = () => {
+  const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isError, setIsError] = useState({ username: false, password: false });
@@ -92,7 +94,10 @@ const LoginPage = () => {
       setLoading(true);
       login({ identity: username, password: password });
       e.currentTarget.reset();
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 500);
+      router.push("/");
     } else if (!valid.password || !valid.username) {
       setShowToast({
         showToast: true,
@@ -118,7 +123,7 @@ const LoginPage = () => {
         <p className="mb-8 font-jost text-head3 font-semibold">Login</p>
         <form
           onSubmit={(e) => submitLoginHandler(e)}
-          className="flex flex-col gap-y-8"
+          className="flex flex-col gap-y-6"
         >
           <div className=" flex w-full flex-col gap-y-2">
             <label htmlFor="username">Username</label>
@@ -138,6 +143,7 @@ const LoginPage = () => {
           <div className="flex w-full flex-col gap-y-2">
             <label htmlFor="username">Password</label>
             <Input
+              type="password"
               onChange={(e) => setPassword(e.target.value.trim())}
               onBlur={passwordHandler}
               value={password}

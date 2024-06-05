@@ -1,4 +1,10 @@
-const loginRequest = async (data: { identity: string; password: string }) => {
+import { loginRes } from "@/types/loginRes";
+import cookieDate from "@/util/cookieDate";
+
+const loginRequest = async (data: {
+  identity: string;
+  password: string;
+}): Promise<loginRes> => {
   try {
     const response = await fetch(
       "https://primecrm-back.liara.run/api/collections/users/auth-with-password",
@@ -16,9 +22,10 @@ const loginRequest = async (data: { identity: string; password: string }) => {
     if (!response.ok) {
       throw new Error("Failed to login");
     }
-    const result = await response.json();
-    document.cookie = `token=${result.token}; `;
-    document.cookie = `isAdmin=${result.isAdmin}; `;
+    const result: loginRes = await response.json();
+    document.cookie = `token=${result.token}; expires=${cookieDate()}; `;
+    document.cookie = `isAdmin=${result.record.isAdmin}; expires=${cookieDate()}; `;
+    document.cookie = `userId=${result.record.id}; expires=${cookieDate()}; `;
 
     return result;
   } catch (error) {

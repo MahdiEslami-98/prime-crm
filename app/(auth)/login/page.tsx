@@ -21,6 +21,7 @@ const LoginPage = () => {
     message: "",
     status: "",
   });
+  const [isAdmin, setIsAdmin] = useState(false);
 
   const usernameHandler = () => {
     if (username.length < 3) {
@@ -71,13 +72,13 @@ const LoginPage = () => {
   const login = async (data: { identity: string; password: string }) => {
     try {
       const response = await loginRequest(data);
-      console.log(response);
       setShowToast({
         showToast: true,
         message: "Login successful",
         status: "text-[#50C878]",
       });
       clearToast(setShowToast);
+      response.record.isAdmin ? router.push("/admin") : router.push("/");
     } catch (error) {
       setShowToast({
         showToast: true,
@@ -94,10 +95,7 @@ const LoginPage = () => {
       setLoading(true);
       login({ identity: username, password: password });
       e.currentTarget.reset();
-      setTimeout(() => {
-        setLoading(false);
-      }, 500);
-      router.push("/");
+      setLoading(false);
     } else if (!valid.password || !valid.username) {
       setShowToast({
         showToast: true,

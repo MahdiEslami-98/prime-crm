@@ -5,6 +5,7 @@ import { FaBars, FaX } from "react-icons/fa6";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { IoMoon, IoSunny } from "react-icons/io5";
+import getCookie from "@/util/getCookie";
 
 const navInfo = [
   {
@@ -32,6 +33,7 @@ const navInfo = [
 const HeaderComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const [isAdmin, setIsAdmin] = useState({ admin: false, user: false });
 
   const themeChanger = () => {
     if (!isDark) {
@@ -49,6 +51,17 @@ const HeaderComponent = () => {
     if (localStorage.getItem("theme") === "dark") {
       setIsDark(true);
       document.documentElement.classList.add("dark");
+    }
+  }, []);
+
+  useEffect(() => {
+    const adminCookie = getCookie("isAdmin");
+    if (adminCookie === "true") {
+      setIsAdmin({ admin: true, user: false });
+    } else if (adminCookie === "false") {
+      setIsAdmin({ admin: false, user: true });
+    } else {
+      setIsAdmin({ admin: false, user: false });
     }
   }, []);
 
@@ -80,10 +93,12 @@ const HeaderComponent = () => {
                 <IoSunny className="h-6 w-6" />
               )}
             </div>
-            <Link href="/login">
+            <Link
+              href={`${isAdmin.admin ? "/admin" : isAdmin.user ? "/account" : "/login"}`}
+            >
               <Button
                 color="bg-primary-03"
-                text="Login"
+                text={`${isAdmin.admin ? "Dashboard" : isAdmin.user ? "Account" : "Login"}`}
                 className="ml-[45px] hidden px-[38px] py-3 text-head6 font-semibold text-white hover:bg-secondry-04 hover:text-primary-03 dark:bg-secondry-04 dark:text-primary-03 dark:hover:bg-primary-01 dark:hover:text-secondry-04 xl:block"
               />
             </Link>
@@ -115,10 +130,12 @@ const HeaderComponent = () => {
                   {item.name}
                 </Link>
               ))}
-              <Link href="/login">
+              <Link
+                href={`${isAdmin.admin ? "/admin" : isAdmin.user ? "/user" : "/login"}`}
+              >
                 <Button
                   color="bg-primary-03"
-                  text="Login"
+                  text={`${isAdmin.admin ? "Dashbord" : isAdmin.user ? "Account" : "Login"}`}
                   className="rounded-[5px] px-4 text-white hover:bg-secondry-04 hover:text-primary-03"
                 />
               </Link>

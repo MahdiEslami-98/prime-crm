@@ -15,4 +15,5 @@ export interface ItemsEntity {
   content: string;
   category: string;
   image: string;
+  desc: string;
 }

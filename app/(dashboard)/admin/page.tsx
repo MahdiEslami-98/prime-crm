@@ -6,16 +6,20 @@ import editPost from "@/api/editPost";
 import getPosts from "@/api/getPosts";
 import getUserInfo from "@/api/getUserInfo";
 import Button from "@/components/button";
+import DeleteModal from "@/components/deleteModal";
 import Input from "@/components/input";
 import Logo from "@/components/logo";
 import Spinner from "@/components/spinner";
+import { addPostReq } from "@/types/addPostReq";
 import { ItemsEntity, posts } from "@/types/postsResponse";
 import { userInfoRes } from "@/types/userInfoRes";
 import getCookie from "@/util/getCookie";
-import React, { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import React, { useEffect, useState } from "react";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 
 const AdminPage = () => {
+  const router = useRouter();
   const [user, setUser] = useState<userInfoRes>();
   const [posts, setPosts] = useState<posts>();
   const [isLoading, setIsLoading] = useState(true);
@@ -29,7 +33,15 @@ const AdminPage = () => {
   const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
-  const [refetch, setRefetch] = useState(false);
+
+  const handleLogout = () => {
+    document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie =
+      "isAdmin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "userId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    localStorage.removeItem("userInfo");
+    router.push("/");
+  };
 
   const getUser = async (id: string) => {
     try {
@@ -49,15 +61,34 @@ const AdminPage = () => {
     }
   };
 
-  useEffect(() => {
-    const userId = getCookie("userId");
-    userId && getUser(userId);
-    setIsLoading(false);
-  }, []);
+  const deletePostHandler = async (id: string) => {
+    try {
+      await deletePost(id);
+      getAllPosts();
+      setShowDeleteModal(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  useEffect(() => {
-    getAllPosts();
-  }, [refetch]);
+  const editPostHandler = async (id: string, data: addPostReq) => {
+    try {
+      await editPost(id, data);
+      getAllPosts();
+      setShowModal(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const addPostHandler = async (data: addPostReq) => {
+    try {
+      await addPost(data);
+      getAllPosts();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const formSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -71,14 +102,12 @@ const AdminPage = () => {
         desc: description,
       };
       if (isEdit) {
-        editPost(postId, data);
-        setRefetch(!refetch);
+        editPostHandler(postId, data);
         setPostId("");
         setShowModal(false);
       } else {
-        addPost(data);
+        addPostHandler(data);
         setShowModal(false);
-        setRefetch(!refetch);
       }
     } else {
       setIsError(true);
@@ -108,8 +137,7 @@ const AdminPage = () => {
   };
 
   const deleteHandler = (id: string) => {
-    deletePost(id);
-    setRefetch(!refetch);
+    deletePostHandler(id);
     setShowDeleteModal(false);
     setPostId("");
   };
@@ -119,44 +147,26 @@ const AdminPage = () => {
     setPostId(id);
   };
 
+  useEffect(() => {
+    const userId = getCookie("userId");
+    userId && getUser(userId);
+    setIsLoading(false);
+  }, []);
+
+  useEffect(() => {
+    getAllPosts();
+  }, []);
+
   return (
     <div className="h-full">
-      {isLoading && (
-        <div className="flex h-full items-center justify-center bg-[rgba(250,250,250,0.5)] text-[#30425e] backdrop:blur-[6px]">
-          <Spinner />
-        </div>
-      )}
-      <dialog open={showDeleteModal}>
-        <div className="fixed left-0 top-0 z-30 h-full w-full bg-[rgba(0,0,0,0.6)]">
-          <div className="fixed left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 rounded-lg bg-white p-8 sm:w-[500px]">
-            <div>
-              <p className="font-jost text-head6 font-semibold">
-                Are you sure you want to delete this post?
-              </p>
-            </div>
-            <div className="mt-8 flex font-jost font-semibold">
-              <Button
-                text="Yes"
-                color="bg-primary-04"
-                onClick={() => {
-                  deleteHandler(postId);
-                  setShowDeleteModal(false);
-                }}
-                className="mr-2 w-16 py-3 "
-              />
-              <Button
-                text="No"
-                color="bg-primary-03"
-                className="w-16 py-3 text-white"
-                onClick={() => {
-                  setShowDeleteModal(false);
-                  setPostId("");
-                }}
-              />
-            </div>
-          </div>
-        </div>
-      </dialog>
+      {isLoading && <Spinner />}
+      <DeleteModal
+        postId={postId}
+        setPostId={setPostId}
+        deleteHandler={deleteHandler}
+        showDeleteModal={showDeleteModal}
+        setShowDeleteModal={setShowDeleteModal}
+      />
       <dialog className="" open={showModal}>
         <div
           onClick={(e) => {
@@ -267,6 +277,7 @@ const AdminPage = () => {
                 color="bg-primary-03"
                 text="Logout"
                 className="flex items-center gap-x-2 px-8 py-3 font-jost font-semibold text-white"
+                onClick={handleLogout}
               >
                 <FaArrowRightFromBracket />
               </Button>

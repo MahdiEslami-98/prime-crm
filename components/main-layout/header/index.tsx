@@ -125,7 +125,7 @@ const HeaderComponent = () => {
                 <Link
                   href={item.route}
                   key={index}
-                  className="flex items-center rounded-[5px] px-4 hover:bg-primary-04/10"
+                  className="flex items-center rounded-[5px] px-4 hover:bg-primary-04/20"
                 >
                   {item.name}
                 </Link>
@@ -136,7 +136,7 @@ const HeaderComponent = () => {
                 <Button
                   color="bg-primary-03"
                   text={`${isAdmin.admin ? "Dashbord" : isAdmin.user ? "Account" : "Login"}`}
-                  className="rounded-[5px] px-4 text-white hover:bg-secondry-04 hover:text-primary-03"
+                  className="h-full w-full rounded-[5px] text-white hover:bg-primary-04/20 hover:text-primary-03"
                 />
               </Link>
             </div>

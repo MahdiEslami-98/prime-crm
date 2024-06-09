@@ -4,6 +4,7 @@ import Toast from "@/components/Toast";
 /* eslint-disable @next/next/no-img-element */
 import Button from "@/components/button";
 import Input from "@/components/input";
+import Logo from "@/components/logo";
 import clearToast from "@/util/clearToast";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -114,8 +115,7 @@ const LoginPage = () => {
         showToast={showToast.showToast}
       />
       <div className="flex items-center gap-x-2 px-8 pt-8">
-        <img src="/images/Logo.png" alt="" />
-        <p className="font-jost text-head2 font-bold">Prime CRM</p>
+        <Logo />
       </div>
       <div className="flex h-[80%] w-full flex-col justify-center px-8 sm:mx-auto sm:w-[70%] md:w-[60%] lg:w-[80%] xl:w-[70%]">
         <p className="mb-8 font-jost text-head3 font-semibold">Login</p>

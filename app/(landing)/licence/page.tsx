@@ -6,7 +6,7 @@ const LicnsePage = () => {
     <div className="text-primary-03 dark:bg-primary-03 dark:text-white">
       <div className="container pb-[215.16px] pt-[107px]">
         <div className="z-10 flex flex-col gap-y-[126px]">
-          <div className="relative z-20 mx-auto max-w-[793px] text-center">
+          <div className="relative z-10 mx-auto max-w-[793px] text-center">
             <p className="pb-[14px] font-jost text-head2 font-semibold">
               Licenses
             </p>

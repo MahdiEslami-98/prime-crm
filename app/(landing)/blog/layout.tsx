@@ -8,6 +8,7 @@ import RecentPostItem from "@/components/recentPostItem";
 import getPosts from "@/api/getPosts";
 import { posts } from "@/types/postsResponse";
 import { usePathname } from "next/navigation";
+import getCookie from "@/util/getCookie";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [posts, setPosts] = useState<posts>();
@@ -25,6 +26,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     getResult();
   }, []);
+
   return (
     <div className="text-primary-03 dark:bg-primary-03 dark:text-white">
       <div className="absolute right-0 top-[40%] z-10 xl:top-[30%]">
@@ -37,7 +39,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="relative z-20 pt-[107px] text-center"
+            className="relative z-10 pt-[107px] text-center"
           >
             <h2 className="font-jost text-head2 font-semibold">Our Journal</h2>
             <p className="font-open-sans text-head6">

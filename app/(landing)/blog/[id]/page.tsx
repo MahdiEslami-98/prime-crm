@@ -17,6 +17,7 @@ import PostComment from "@/components/postComment";
 import Comments from "@/components/comments";
 import { commentRes } from "@/types/getCommentsByPostIdRes";
 import getCommentByPostId from "@/api/getCommentsByPostId";
+import getCookie from "@/util/getCookie";
 
 const logos = [
   {
@@ -44,6 +45,7 @@ const logos = [
 const SingleBlog = ({ params }: { params: { id: string } }) => {
   const [post, setPost] = useState<responsePostById>();
   const [comments, setComments] = useState<commentRes>();
+  const [isAdmin, setIsAdmin] = useState("");
 
   const getPost = async (param: string) => {
     try {
@@ -57,7 +59,6 @@ const SingleBlog = ({ params }: { params: { id: string } }) => {
   const getComment = async (param: string) => {
     try {
       const response = await getCommentByPostId(param);
-      console.log(response);
       response && setComments(response);
     } catch (error) {
       console.log(error);
@@ -65,11 +66,13 @@ const SingleBlog = ({ params }: { params: { id: string } }) => {
   };
 
   useEffect(() => {
-    getComment(params.id);
+    getPost(params.id);
+    const admin = getCookie("isAdmin");
+    admin && setIsAdmin(admin);
   }, [params.id]);
 
   useEffect(() => {
-    getPost(params.id);
+    getComment(params.id);
   }, [params.id]);
 
   return (
@@ -139,7 +142,7 @@ const SingleBlog = ({ params }: { params: { id: string } }) => {
       </div>
       <div>
         <h3 className="font-jost text-head2 font-semibold">Comments</h3>
-        {comments && <Comments comments={comments} />}
+        {comments && <Comments comments={comments} ad={isAdmin} />}
       </div>
     </>
   );

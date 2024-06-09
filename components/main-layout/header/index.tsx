@@ -85,7 +85,7 @@ const HeaderComponent = () => {
             </ul>
             <div
               onClick={themeChanger}
-              className="mr-4 cursor-pointer lg:ml-[45px] lg:mr-0"
+              className="mr-4 cursor-pointer lg:ml-[45px]"
             >
               {isDark ? (
                 <IoMoon className=" h-6 w-6 " />
@@ -120,12 +120,13 @@ const HeaderComponent = () => {
             </button>
           )}
           {isOpen && (
-            <div className="absolute left-1/2 right-1/2 top-[120%] z-50 grid h-[270px] w-[90%] -translate-x-1/2 animate-fadeIn grid-cols-1 gap-y-1 rounded-[5px] border border-[6c6c6c] bg-white p-4 shadow-md dark:bg-secondry-06 md:h-[150px] md:grid-cols-2 xl:hidden">
+            <div className="absolute left-1/2 right-1/2 top-[120%] z-40 grid h-[270px] w-[90%] -translate-x-1/2 animate-fadeIn grid-cols-1 gap-y-1 rounded-[5px] border border-[6c6c6c] bg-white p-4 shadow-md transition-opacity duration-100 dark:bg-secondry-06 md:h-[150px] md:grid-cols-2 xl:hidden">
               {navInfo.map((item, index) => (
                 <Link
                   href={item.route}
                   key={index}
                   className="flex items-center rounded-[5px] px-4 hover:bg-primary-04/20"
+                  onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>
@@ -137,6 +138,7 @@ const HeaderComponent = () => {
                   color="bg-primary-03"
                   text={`${isAdmin.admin ? "Dashbord" : isAdmin.user ? "Account" : "Login"}`}
                   className="h-full w-full rounded-[5px] text-white hover:bg-primary-04/20 hover:text-primary-03"
+                  onClick={() => setIsOpen(false)}
                 />
               </Link>
             </div>

@@ -8,7 +8,7 @@ import SliderSection from "@/components/slidersection";
 
 const Home = () => {
   return (
-    <div className="text-primary-03 dark:bg-primary-03 dark:text-white">
+    <div className="overflow-hidden text-primary-03 dark:bg-primary-03 dark:text-white">
       <HeroSection />
       <ExploreSection />
       <MarketingSection />

@@ -11,7 +11,7 @@ const SliderSection = () => {
           <div className="">
             <CustomSlider />
           </div>
-          <div className="grid grid-cols-2 justify-center justify-items-center gap-x-[100px] border-t border-[#999999] pt-[50px] text-white md:flex lg:gap-x-[200px] lg:px-[28.22px]">
+          <div className="grid grid-cols-2 justify-items-center gap-x-[100px] border-t border-[#999999] pt-[50px] text-center text-white md:flex lg:gap-x-[200px] lg:px-[28.22px]">
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ const SliderSection = () => {
               <h3 className="font-jost text-head2 font-semibold">
                 4.9<span className="text-[#47cfff]">/</span>5
               </h3>
-              <p className="font-open-sans text-head6 font-semibold">
+              <p className="whitespace-nowrap font-open-sans text-head6 font-semibold">
                 User Rating
               </p>
             </motion.div>
@@ -34,7 +34,7 @@ const SliderSection = () => {
               <h3 className="font-jost text-head2 font-semibold">
                 350<span className="text-[#ffb545]">K</span>+
               </h3>
-              <p className="font-open-sans text-head6 font-semibold">
+              <p className="whitespace-nowrap font-open-sans text-head6 font-semibold">
                 Customers
               </p>
             </motion.div>
@@ -47,7 +47,7 @@ const SliderSection = () => {
               <h3 className="font-jost text-head2 font-semibold">
                 99<span className="text-[#47dd56]">+</span>
               </h3>
-              <p className="font-open-sans text-head6 font-semibold">
+              <p className="whitespace-nowrap font-open-sans text-head6 font-semibold">
                 Team Members
               </p>
             </motion.div>
@@ -60,7 +60,7 @@ const SliderSection = () => {
               <h3 className="font-jost text-head2 font-semibold">
                 41<span className="text-[#ff5454]">M</span>
               </h3>
-              <p className="font-open-sans text-head6 font-semibold">
+              <p className="whitespace-nowrap font-open-sans text-head6 font-semibold">
                 Current Users
               </p>
             </motion.div>

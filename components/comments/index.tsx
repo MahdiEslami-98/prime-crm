@@ -1,7 +1,9 @@
 import { commentRes } from "@/types/getCommentsByPostIdRes";
 import dateFormater from "@/util/dateFormat";
+import Button from "../button";
 
-const Comments = ({ comments }: { comments: commentRes }) => {
+const Comments = ({ comments, ad }: { comments: commentRes; ad: string }) => {
+  const deleteComment = () => {};
   return (
     <div className="w-full pt-6">
       <div className="flex flex-col gap-y-4">
@@ -16,9 +18,19 @@ const Comments = ({ comments }: { comments: commentRes }) => {
                   <p className="font-jost text-head6 font-semibold">
                     {comment.fullname}
                   </p>
-                  <p className="font-open-sans text-[#888] dark:text-[#ccc]">
-                    {dateFormater(comment.created)}
-                  </p>
+                  <div className="flex items-center gap-x-2">
+                    {ad === "true" && (
+                      <Button
+                        color="bg-primary-03"
+                        text="Delete"
+                        className="px-2 text-white"
+                        onClick={deleteComment}
+                      />
+                    )}
+                    <p className="font-open-sans text-[#888] dark:text-[#ccc]">
+                      {dateFormater(comment.created)}
+                    </p>
+                  </div>
                 </div>
                 <p className="font-open-sans">{comment.message}</p>
               </div>

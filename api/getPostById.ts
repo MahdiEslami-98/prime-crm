@@ -1,5 +1,4 @@
 const getPostById = async (id: string) => {
-  console.log(id);
   try {
     const response = await fetch(
       `https://primecrm-back.liara.run/api/collections/posts/records/${id}`,

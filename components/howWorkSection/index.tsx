@@ -69,7 +69,7 @@ const HowItWorkSection = () => {
               ))}
             </div>
           </div>
-          <div className="mobile_app_section flex flex-col justify-center self-center rounded-[30px] bg-[#f6f6f6] pb-[85px] pl-[80px] pt-[115px] xl:rounded-l-[30px]  ">
+          <div className="mobile_app_section flex flex-col justify-center self-center rounded-[30px] bg-[#f6f6f6] px-6 pb-[85px] pt-[115px] xl:rounded-l-[30px] xl:pl-[80px] xl:pr-0  ">
             <div className="max-w-[551px]">
               <motion.h3
                 initial={{ opacity: 0, y: 100 }}

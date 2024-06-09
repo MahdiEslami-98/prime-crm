@@ -17,10 +17,10 @@ const ExploreSection = () => {
           transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
           className="flex flex-col gap-y-[14px] text-center"
         >
-          <h3 className="font-jost text-head2 font-semibold">
+          <h3 className="font-jost text-head3 font-semibold sm:text-head2">
             Explore Premium Features
           </h3>
-          <p className="mx-auto max-w-[871px] font-open-sans text-head6">
+          <p className="mx-auto max-w-[871px] font-open-sans sm:text-head6">
             Unique and powerful suite of software to run your entire business,
             brought to you by a company with the long term vision to transform
             the way you work.
@@ -105,10 +105,10 @@ const ExploreSection = () => {
               viewport={{ once: true }}
               className="relative z-20"
             >
-              <h3 className="font-jost text-head2 font-semibold">
+              <h3 className="font-jost text-head3 font-semibold sm:text-head2">
                 Allocate Leads and Simplify Lead Management
               </h3>
-              <p className="font-open-sans text-head6">
+              <p className="font-open-sans sm:text-head6">
                 Unique and powerful suite of software to run your entire
                 business, brought to you by a company with the long term vision
                 to transform the way you work.

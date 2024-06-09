@@ -1,9 +1,24 @@
 import { commentRes } from "@/types/getCommentsByPostIdRes";
 import dateFormater from "@/util/dateFormat";
 import Button from "../button";
+import deleteComment from "@/api/deleteComment";
 
-const Comments = ({ comments, ad }: { comments: commentRes; ad: string }) => {
-  const deleteComment = () => {};
+const Comments = ({
+  comments,
+  setComment,
+  ad,
+}: {
+  comments: commentRes;
+  setComment: Function;
+  ad: string;
+}) => {
+  const handleDeleteComment = (id: string) => {
+    deleteComment(id);
+    setComment((prev: commentRes) => ({
+      ...prev,
+      items: prev.items?.filter((item) => item.id !== id),
+    }));
+  };
   return (
     <div className="w-full pt-6">
       <div className="flex flex-col gap-y-4">
@@ -18,13 +33,13 @@ const Comments = ({ comments, ad }: { comments: commentRes; ad: string }) => {
                   <p className="font-jost text-head6 font-semibold">
                     {comment.fullname}
                   </p>
-                  <div className="flex items-center gap-x-2">
+                  <div className="flex flex-col-reverse items-center gap-x-2 sm:flex-row">
                     {ad === "true" && (
                       <Button
                         color="bg-primary-03"
                         text="Delete"
                         className="px-2 text-white"
-                        onClick={deleteComment}
+                        onClick={() => handleDeleteComment(comment.id)}
                       />
                     )}
                     <p className="font-open-sans text-[#888] dark:text-[#ccc]">

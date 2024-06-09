@@ -85,7 +85,7 @@ const HeaderComponent = () => {
             </ul>
             <div
               onClick={themeChanger}
-              className="mr-4 cursor-pointer lg:ml-[45px]"
+              className="mr-0.5 cursor-pointer md:mr-4 lg:ml-[45px]"
             >
               {isDark ? (
                 <IoMoon className=" h-6 w-6 " />

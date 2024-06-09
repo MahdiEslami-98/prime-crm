@@ -270,15 +270,16 @@ const AdminPage = () => {
       </dialog>
       <div className="container h-full text-primary-03">
         {!isLoading && (
-          <div className="flex flex-col gap-y-6 px-4 pt-8">
+          <div className="flex flex-col px-1 pt-8 sm:gap-y-6 sm:px-4">
             <div className="flex items-center justify-between">
               <Logo />
               <Button
                 color="bg-primary-03"
-                text="Logout"
+                text=""
                 className="flex items-center gap-x-2 px-8 py-3 font-jost font-semibold text-white"
                 onClick={handleLogout}
               >
+                <p className="hidden sm:block">Logout</p>
                 <FaArrowRightFromBracket />
               </Button>
             </div>

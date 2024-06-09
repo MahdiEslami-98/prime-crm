@@ -6,7 +6,9 @@ const Logo = ({ className }: { className?: string }) => {
     <Link href={"/"} className="z-20 flex items-center gap-x-2">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/images/Logo.png" alt="" className="h-[55px] w-[55px]" />
-      <span className={`text-head2 font-bold ${className}`}>PrimeCRM</span>
+      <span className={`text-head3 font-bold md:text-head2 ${className}`}>
+        PrimeCRM
+      </span>
     </Link>
   );
 };

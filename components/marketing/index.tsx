@@ -40,10 +40,10 @@ const MarketingSection = () => {
             transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
           >
             <div className="pr-[88px]">
-              <h3 className="pb-[17px] font-jost text-head2 font-semibold">
+              <h3 className="pb-[17px] font-jost text-head3 font-semibold sm:text-head2">
                 Ways A Project Managment Tool Can Help Your Team
               </h3>
-              <p className="font-open-sans text-head6">
+              <p className="font-open-sans sm:text-head6">
                 Unique and powerful suite of software to run your entire
                 business, brought to you by a company with the long term vision
                 to transform the way you work.

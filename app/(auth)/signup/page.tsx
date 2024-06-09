@@ -158,7 +158,7 @@ const SignupPage = () => {
       <div className="flex h-[80%] w-full flex-col justify-center px-8 sm:mx-auto sm:w-[70%] md:w-[60%] lg:w-[80%] xl:w-[70%]">
         <p className="mb-8 font-jost text-head3 font-semibold">Signup</p>
         <form
-          className="flex flex-col gap-y-6"
+          className="flex flex-col gap-y-2 sm:gap-y-6"
           onSubmit={(e) => submitSignupHandler(e)}
         >
           <div className=" flex w-full flex-col gap-y-1">

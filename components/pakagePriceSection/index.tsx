@@ -162,10 +162,10 @@ const PakagePriceSection = () => {
           transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
           className="max-w-[871px] text-center"
         >
-          <h3 className="font-jost text-head2 font-semibold dark:text-white">
+          <h3 className="font-jost text-head3 font-semibold dark:text-white md:text-head2">
             Deliver End-To-End Retail Billing & Solutions
           </h3>
-          <p className="font-open-sans text-head5 text-[#4e4e4e] dark:text-[#9a9a9a]">
+          <p className="font-open-sans text-head6 text-[#4e4e4e] dark:text-[#9a9a9a] md:text-head5">
             Unique and powerful suite of software to run your entire business,
             brought to you by a company with the long term vision to transform
             the way you work.
@@ -183,13 +183,13 @@ const PakagePriceSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
             >
-              <div className="flex items-center gap-x-[9px] pb-[8px] pl-[60px]">
+              <div className="flex items-center gap-x-[9px] pb-[8px] pl-10 sm:pl-[60px]">
                 <img
                   src="/icons/Icon (12).png"
                   alt=""
                   className="h-[57px] w-[57px]"
                 />
-                <p className="font-jost text-head4 md:text-head3">Starter</p>
+                <p className="font-jost text-head5 md:text-head3">Starter</p>
               </div>
               <div className="rounded-[30px] bg-white px-[62px] py-[63px] drop-shadow-[0_28px_57px_rgba(190,190,190,0.25)] dark:bg-secondry-06 dark:text-white">
                 <div className="text-primary-03 dark:text-white">
@@ -231,13 +231,13 @@ const PakagePriceSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
             >
-              <div className="flex items-center gap-x-[9px] pb-[8px] pl-[60px]">
+              <div className="flex items-center gap-x-[9px] pb-[8px] pl-10 sm:pl-[60px]">
                 <img
                   src="/icons/Icon (11).png"
                   alt=""
                   className="h-[57px] w-[57px]"
                 />
-                <p className="font-jost text-head4 md:text-head3">
+                <p className="font-jost text-head5 md:text-head3">
                   Professional
                 </p>
               </div>

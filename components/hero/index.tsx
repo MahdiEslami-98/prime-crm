@@ -49,10 +49,10 @@ const HeroSection = () => {
             viewport={{ once: true }}
           >
             <div className="relative mb-[34px] xl:z-20">
-              <h1 className="pb-[21px] pr-[49px] font-jost text-head1 font-semibold">
+              <h1 className="pb-[21px] pr-[49px] font-jost text-head2 font-semibold md:text-head1">
                 The CRM Platform Your Whole Business Will Love
               </h1>
-              <p className="font-open-sans text-head5">
+              <p className="font-open-sans text-head6 sm:text-head5">
                 Provide excellent customer service. Answer more tickets
                 all-in-one Primarily software.
               </p>
@@ -69,7 +69,11 @@ const HeroSection = () => {
             </div>
             <hr className="mb-[56px] h-px border-0 bg-secondry-02 outline-0" />
             <div className="flex items-center">
-              <img src="/images/star1.png" alt="" className="pr-[23px]" />
+              <img
+                src="/images/star1.png"
+                alt=""
+                className="pr-2 sm:pr-[23px]"
+              />
               <img src="/images/star3.png" alt="" />
               <div className="border-l border-[#c1c1c1] pl-[28.86px] sm:ml-[26.39px] sm:mr-[22.16px]">
                 <p className="font-open-sans text-head5 font-bold sm:text-head3">

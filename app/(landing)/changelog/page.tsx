@@ -14,7 +14,7 @@ const ChangelogPage = () => {
         </div>
         <div className="drop-shadow-3xl flex h-[300px] items-center justify-center rounded-[30px] bg-gradient-to-r from-primary-01 to-primary-02 px-12 md:h-[490px] lg:px-0">
           <div className="rounded-[20px] bg-white px-[20px] py-[30px] dark:bg-secondry-06 md:px-[119px] md:py-[62px]">
-            <p className="font-mulish text-base text-head5 text-[#808080]">
+            <p className="font-mulish text-base text-[#808080] md:text-head5">
               <span className="pr-[13px] font-jost text-head4 font-extrabold text-[#2f2f2f] dark:text-white md:text-head1">
                 V.1
               </span>

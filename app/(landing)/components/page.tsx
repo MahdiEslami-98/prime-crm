@@ -69,7 +69,7 @@ const ComponentsPage = () => {
             </p>
             <div className="col-span-1 row-span-11 flex flex-col gap-y-[56px] pl-4 md:col-span-9 md:row-span-1">
               <div className="flex justify-center xl:justify-start">
-                <div className="flex flex-wrap gap-x-[75px] gap-y-8">
+                <div className="flex flex-wrap justify-center gap-x-[75px] gap-y-8 md:justify-start">
                   {color.map((item) => (
                     <ColorCard
                       key={item.hex}
@@ -155,11 +155,11 @@ const ComponentsPage = () => {
                   alt=""
                   className="mx-auto mt-4 inline-block"
                 />
-                <p className="font-open-sans text-head6 font-semibold italic leading-[24px]">
-                  <span className="text-[71px]">W</span>hen an unknown
-                  printegalley of type and scrambled it to make a type specimen
-                  book. It has survived not only five centuries, but also the
-                  leap into electronic typesetting.
+                <p className="font-open-sans font-semibold italic leading-[24px] md:text-head6">
+                  <span className="text-head2 md:text-[71px]">W</span>hen an
+                  unknown printegalley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting.
                 </p>
               </div>
             </div>
@@ -169,7 +169,7 @@ const ComponentsPage = () => {
               Button
             </p>
             <div className="row-span-2 flex flex-col flex-wrap gap-y-[50px] pl-4 md:col-span-9 md:row-span-1">
-              <div className="flex justify-center gap-x-[20px] md:justify-start">
+              <div className="flex flex-col items-center justify-start gap-x-[20px] gap-y-5 md:flex-row md:items-start md:justify-center md:gap-y-0">
                 <Button
                   text="Default"
                   color="bg-primary-03"
@@ -185,12 +185,12 @@ const ComponentsPage = () => {
                 <Button
                   text="Default"
                   color="bg-primary-03"
-                  className="px-[141px] py-[14px] text-head6 font-semibold text-white dark:bg-primary-02 dark:text-primary-03"
+                  className="px-24 py-[14px] text-head6 font-semibold text-white dark:bg-primary-02 dark:text-primary-03 md:px-[141px]"
                 />
                 <Button
                   text="Default"
                   color="bg-secondry-05"
-                  className="px-[141px] py-[14px] text-head6 font-semibold text-primary-03"
+                  className="px-24 py-[14px] text-head6 font-semibold text-primary-03 md:px-[141px]"
                 />
               </div>
             </div>
